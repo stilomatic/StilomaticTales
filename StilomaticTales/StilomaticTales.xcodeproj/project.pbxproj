@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		35781D6417E1ECE000FBD5FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6317E1ECE000FBD5FC /* Foundation.framework */; };
+		35781D6617E1ECE000FBD5FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6517E1ECE000FBD5FC /* CoreGraphics.framework */; };
+		35781D6817E1ECE000FBD5FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6717E1ECE000FBD5FC /* UIKit.framework */; };
+		35781D6A17E1ECE000FBD5FC /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6917E1ECE000FBD5FC /* SpriteKit.framework */; };
+		35781D7017E1ECE000FBD5FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35781D6E17E1ECE000FBD5FC /* InfoPlist.strings */; };
+		35781D7217E1ECE000FBD5FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781D7117E1ECE000FBD5FC /* main.m */; };
+		35781D7617E1ECE000FBD5FC /* ASTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781D7517E1ECE000FBD5FC /* ASTAppDelegate.m */; };
+		35781D7917E1ECE000FBD5FC /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35781D7717E1ECE000FBD5FC /* Main_iPhone.storyboard */; };
+		35781D7C17E1ECE000FBD5FC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35781D7A17E1ECE000FBD5FC /* Main_iPad.storyboard */; };
+		35781D7F17E1ECE000FBD5FC /* ASTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781D7E17E1ECE000FBD5FC /* ASTViewController.m */; };
+		35781D8617E1ECE000FBD5FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35781D8517E1ECE000FBD5FC /* Images.xcassets */; };
+		35781D8D17E1ECE000FBD5FC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D8C17E1ECE000FBD5FC /* XCTest.framework */; };
+		35781D8E17E1ECE000FBD5FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6317E1ECE000FBD5FC /* Foundation.framework */; };
+		35781D8F17E1ECE000FBD5FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6717E1ECE000FBD5FC /* UIKit.framework */; };
+		35781D9717E1ECE000FBD5FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35781D9517E1ECE000FBD5FC /* InfoPlist.strings */; };
+		35781D9917E1ECE000FBD5FC /* StilomaticTalesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781D9817E1ECE000FBD5FC /* StilomaticTalesTests.m */; };
+		35781DAE17E1ED5E00FBD5FC /* cannon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35781DA217E1ED5E00FBD5FC /* cannon.png */; };
+		35781DAF17E1ED5E00FBD5FC /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 35781DA317E1ED5E00FBD5FC /* bubble.png */; };
+		35781DB017E1ED5E00FBD5FC /* ASTMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA417E1ED5E00FBD5FC /* ASTMathUtils.m */; };
+		35781DB117E1ED5E00FBD5FC /* ASTGameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA617E1ED5E00FBD5FC /* ASTGameManager.m */; };
+		35781DB217E1ED5E00FBD5FC /* ASTGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA817E1ED5E00FBD5FC /* ASTGame.m */; };
+		35781DB317E1ED5E00FBD5FC /* ASTCanon.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAA17E1ED5E00FBD5FC /* ASTCanon.m */; };
+		35781DB417E1ED5E00FBD5FC /* ASTBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		35781D9017E1ECE000FBD5FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35781D5817E1ECE000FBD5FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35781D5F17E1ECE000FBD5FC;
+			remoteInfo = StilomaticTales;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35781D6017E1ECE000FBD5FC /* StilomaticTales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StilomaticTales.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35781D6317E1ECE000FBD5FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		35781D6517E1ECE000FBD5FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		35781D6717E1ECE000FBD5FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		35781D6917E1ECE000FBD5FC /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		35781D6D17E1ECE000FBD5FC /* StilomaticTales-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StilomaticTales-Info.plist"; sourceTree = "<group>"; };
+		35781D6F17E1ECE000FBD5FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		35781D7117E1ECE000FBD5FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35781D7317E1ECE000FBD5FC /* StilomaticTales-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StilomaticTales-Prefix.pch"; sourceTree = "<group>"; };
+		35781D7417E1ECE000FBD5FC /* ASTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASTAppDelegate.h; sourceTree = "<group>"; };
+		35781D7517E1ECE000FBD5FC /* ASTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASTAppDelegate.m; sourceTree = "<group>"; };
+		35781D7817E1ECE000FBD5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		35781D7B17E1ECE000FBD5FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		35781D7D17E1ECE000FBD5FC /* ASTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASTViewController.h; sourceTree = "<group>"; };
+		35781D7E17E1ECE000FBD5FC /* ASTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASTViewController.m; sourceTree = "<group>"; };
+		35781D8517E1ECE000FBD5FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		35781D8B17E1ECE000FBD5FC /* StilomaticTalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StilomaticTalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35781D8C17E1ECE000FBD5FC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		35781D9417E1ECE000FBD5FC /* StilomaticTalesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StilomaticTalesTests-Info.plist"; sourceTree = "<group>"; };
+		35781D9617E1ECE000FBD5FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		35781D9817E1ECE000FBD5FC /* StilomaticTalesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StilomaticTalesTests.m; sourceTree = "<group>"; };
+		35781DA217E1ED5E00FBD5FC /* cannon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cannon.png; sourceTree = "<group>"; };
+		35781DA317E1ED5E00FBD5FC /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		35781DA417E1ED5E00FBD5FC /* ASTMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTMathUtils.m; sourceTree = "<group>"; };
+		35781DA517E1ED5E00FBD5FC /* ASTMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTMathUtils.h; sourceTree = "<group>"; };
+		35781DA617E1ED5E00FBD5FC /* ASTGameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTGameManager.m; sourceTree = "<group>"; };
+		35781DA717E1ED5E00FBD5FC /* ASTGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGameManager.h; sourceTree = "<group>"; };
+		35781DA817E1ED5E00FBD5FC /* ASTGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTGame.m; sourceTree = "<group>"; };
+		35781DA917E1ED5E00FBD5FC /* ASTGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGame.h; sourceTree = "<group>"; };
+		35781DAA17E1ED5E00FBD5FC /* ASTCanon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTCanon.m; sourceTree = "<group>"; };
+		35781DAB17E1ED5E00FBD5FC /* ASTCanon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTCanon.h; sourceTree = "<group>"; };
+		35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTBubble.m; sourceTree = "<group>"; };
+		35781DAD17E1ED5E00FBD5FC /* ASTBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTBubble.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35781D5D17E1ECE000FBD5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35781D6617E1ECE000FBD5FC /* CoreGraphics.framework in Frameworks */,
+				35781D6817E1ECE000FBD5FC /* UIKit.framework in Frameworks */,
+				35781D6A17E1ECE000FBD5FC /* SpriteKit.framework in Frameworks */,
+				35781D6417E1ECE000FBD5FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35781D8817E1ECE000FBD5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35781D8D17E1ECE000FBD5FC /* XCTest.framework in Frameworks */,
+				35781D8F17E1ECE000FBD5FC /* UIKit.framework in Frameworks */,
+				35781D8E17E1ECE000FBD5FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35781D5717E1ECE000FBD5FC = {
+			isa = PBXGroup;
+			children = (
+				35781D6B17E1ECE000FBD5FC /* StilomaticTales */,
+				35781D9217E1ECE000FBD5FC /* StilomaticTalesTests */,
+				35781D6217E1ECE000FBD5FC /* Frameworks */,
+				35781D6117E1ECE000FBD5FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35781D6117E1ECE000FBD5FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35781D6017E1ECE000FBD5FC /* StilomaticTales.app */,
+				35781D8B17E1ECE000FBD5FC /* StilomaticTalesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35781D6217E1ECE000FBD5FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35781D6317E1ECE000FBD5FC /* Foundation.framework */,
+				35781D6517E1ECE000FBD5FC /* CoreGraphics.framework */,
+				35781D6717E1ECE000FBD5FC /* UIKit.framework */,
+				35781D6917E1ECE000FBD5FC /* SpriteKit.framework */,
+				35781D8C17E1ECE000FBD5FC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35781D6B17E1ECE000FBD5FC /* StilomaticTales */ = {
+			isa = PBXGroup;
+			children = (
+				35781DB717E1EDAB00FBD5FC /* Sprites */,
+				35781DB617E1ED8900FBD5FC /* Utils */,
+				35781DB517E1ED7C00FBD5FC /* Assets */,
+				35781DA717E1ED5E00FBD5FC /* ASTGameManager.h */,
+				35781DA617E1ED5E00FBD5FC /* ASTGameManager.m */,
+				35781DA917E1ED5E00FBD5FC /* ASTGame.h */,
+				35781DA817E1ED5E00FBD5FC /* ASTGame.m */,
+				35781D7417E1ECE000FBD5FC /* ASTAppDelegate.h */,
+				35781D7517E1ECE000FBD5FC /* ASTAppDelegate.m */,
+				35781D7717E1ECE000FBD5FC /* Main_iPhone.storyboard */,
+				35781D7A17E1ECE000FBD5FC /* Main_iPad.storyboard */,
+				35781D7D17E1ECE000FBD5FC /* ASTViewController.h */,
+				35781D7E17E1ECE000FBD5FC /* ASTViewController.m */,
+				35781D8517E1ECE000FBD5FC /* Images.xcassets */,
+				35781D6C17E1ECE000FBD5FC /* Supporting Files */,
+			);
+			path = StilomaticTales;
+			sourceTree = "<group>";
+		};
+		35781D6C17E1ECE000FBD5FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35781D6D17E1ECE000FBD5FC /* StilomaticTales-Info.plist */,
+				35781D6E17E1ECE000FBD5FC /* InfoPlist.strings */,
+				35781D7117E1ECE000FBD5FC /* main.m */,
+				35781D7317E1ECE000FBD5FC /* StilomaticTales-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35781D9217E1ECE000FBD5FC /* StilomaticTalesTests */ = {
+			isa = PBXGroup;
+			children = (
+				35781D9817E1ECE000FBD5FC /* StilomaticTalesTests.m */,
+				35781D9317E1ECE000FBD5FC /* Supporting Files */,
+			);
+			path = StilomaticTalesTests;
+			sourceTree = "<group>";
+		};
+		35781D9317E1ECE000FBD5FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35781D9417E1ECE000FBD5FC /* StilomaticTalesTests-Info.plist */,
+				35781D9517E1ECE000FBD5FC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		35781DB517E1ED7C00FBD5FC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				35781DA217E1ED5E00FBD5FC /* cannon.png */,
+				35781DA317E1ED5E00FBD5FC /* bubble.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		35781DB617E1ED8900FBD5FC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				35781DA417E1ED5E00FBD5FC /* ASTMathUtils.m */,
+				35781DA517E1ED5E00FBD5FC /* ASTMathUtils.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		35781DB717E1EDAB00FBD5FC /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				35781DAA17E1ED5E00FBD5FC /* ASTCanon.m */,
+				35781DAB17E1ED5E00FBD5FC /* ASTCanon.h */,
+				35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */,
+				35781DAD17E1ED5E00FBD5FC /* ASTBubble.h */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35781D5F17E1ECE000FBD5FC /* StilomaticTales */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35781D9C17E1ECE000FBD5FC /* Build configuration list for PBXNativeTarget "StilomaticTales" */;
+			buildPhases = (
+				35781D5C17E1ECE000FBD5FC /* Sources */,
+				35781D5D17E1ECE000FBD5FC /* Frameworks */,
+				35781D5E17E1ECE000FBD5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StilomaticTales;
+			productName = StilomaticTales;
+			productReference = 35781D6017E1ECE000FBD5FC /* StilomaticTales.app */;
+			productType = "com.apple.product-type.application";
+		};
+		35781D8A17E1ECE000FBD5FC /* StilomaticTalesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35781D9F17E1ECE000FBD5FC /* Build configuration list for PBXNativeTarget "StilomaticTalesTests" */;
+			buildPhases = (
+				35781D8717E1ECE000FBD5FC /* Sources */,
+				35781D8817E1ECE000FBD5FC /* Frameworks */,
+				35781D8917E1ECE000FBD5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35781D9117E1ECE000FBD5FC /* PBXTargetDependency */,
+			);
+			name = StilomaticTalesTests;
+			productName = StilomaticTalesTests;
+			productReference = 35781D8B17E1ECE000FBD5FC /* StilomaticTalesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35781D5817E1ECE000FBD5FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AST;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Stilo-studio";
+				TargetAttributes = {
+					35781D8A17E1ECE000FBD5FC = {
+						TestTargetID = 35781D5F17E1ECE000FBD5FC;
+					};
+				};
+			};
+			buildConfigurationList = 35781D5B17E1ECE000FBD5FC /* Build configuration list for PBXProject "StilomaticTales" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35781D5717E1ECE000FBD5FC;
+			productRefGroup = 35781D6117E1ECE000FBD5FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35781D5F17E1ECE000FBD5FC /* StilomaticTales */,
+				35781D8A17E1ECE000FBD5FC /* StilomaticTalesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35781D5E17E1ECE000FBD5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35781DAF17E1ED5E00FBD5FC /* bubble.png in Resources */,
+				35781D8617E1ECE000FBD5FC /* Images.xcassets in Resources */,
+				35781DAE17E1ED5E00FBD5FC /* cannon.png in Resources */,
+				35781D7C17E1ECE000FBD5FC /* Main_iPad.storyboard in Resources */,
+				35781D7917E1ECE000FBD5FC /* Main_iPhone.storyboard in Resources */,
+				35781D7017E1ECE000FBD5FC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35781D8917E1ECE000FBD5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35781D9717E1ECE000FBD5FC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35781D5C17E1ECE000FBD5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35781DB117E1ED5E00FBD5FC /* ASTGameManager.m in Sources */,
+				35781D7217E1ECE000FBD5FC /* main.m in Sources */,
+				35781D7F17E1ECE000FBD5FC /* ASTViewController.m in Sources */,
+				35781DB017E1ED5E00FBD5FC /* ASTMathUtils.m in Sources */,
+				35781DB317E1ED5E00FBD5FC /* ASTCanon.m in Sources */,
+				35781D7617E1ECE000FBD5FC /* ASTAppDelegate.m in Sources */,
+				35781DB417E1ED5E00FBD5FC /* ASTBubble.m in Sources */,
+				35781DB217E1ED5E00FBD5FC /* ASTGame.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35781D8717E1ECE000FBD5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35781D9917E1ECE000FBD5FC /* StilomaticTalesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35781D9117E1ECE000FBD5FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35781D5F17E1ECE000FBD5FC /* StilomaticTales */;
+			targetProxy = 35781D9017E1ECE000FBD5FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		35781D6E17E1ECE000FBD5FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35781D6F17E1ECE000FBD5FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		35781D7717E1ECE000FBD5FC /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35781D7817E1ECE000FBD5FC /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		35781D7A17E1ECE000FBD5FC /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35781D7B17E1ECE000FBD5FC /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		35781D9517E1ECE000FBD5FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35781D9617E1ECE000FBD5FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35781D9A17E1ECE000FBD5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35781D9B17E1ECE000FBD5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35781D9D17E1ECE000FBD5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StilomaticTales/StilomaticTales-Prefix.pch";
+				INFOPLIST_FILE = "StilomaticTales/StilomaticTales-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		35781D9E17E1ECE000FBD5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StilomaticTales/StilomaticTales-Prefix.pch";
+				INFOPLIST_FILE = "StilomaticTales/StilomaticTales-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		35781DA017E1ECE000FBD5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StilomaticTales.app/StilomaticTales";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StilomaticTales/StilomaticTales-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "StilomaticTalesTests/StilomaticTalesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		35781DA117E1ECE000FBD5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StilomaticTales.app/StilomaticTales";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StilomaticTales/StilomaticTales-Prefix.pch";
+				INFOPLIST_FILE = "StilomaticTalesTests/StilomaticTalesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35781D5B17E1ECE000FBD5FC /* Build configuration list for PBXProject "StilomaticTales" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35781D9A17E1ECE000FBD5FC /* Debug */,
+				35781D9B17E1ECE000FBD5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35781D9C17E1ECE000FBD5FC /* Build configuration list for PBXNativeTarget "StilomaticTales" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35781D9D17E1ECE000FBD5FC /* Debug */,
+				35781D9E17E1ECE000FBD5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		35781D9F17E1ECE000FBD5FC /* Build configuration list for PBXNativeTarget "StilomaticTalesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35781DA017E1ECE000FBD5FC /* Debug */,
+				35781DA117E1ECE000FBD5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35781D5817E1ECE000FBD5FC /* Project object */;
+}
