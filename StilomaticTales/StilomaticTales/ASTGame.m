@@ -16,27 +16,19 @@
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
         
         self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-        
-        //self.physicsWorld = [[SKPhysicsWorld alloc] init];
         
         self.physicsWorld.gravity = CGPointMake(0, 0.0);
         self.physicsWorld.speed = 10.0;
         self.physicsWorld.contactDelegate = self;
         
-        SKNode *bottom = [[SKNode alloc] init];
-        bottom.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(320, 44)];
-        bottom.physicsBody.density = 1.0;
-        
-        
         int row = 0;
         int column = 0;
         
         for(int i = 0; i < 80; i++){
-            int random = (int)[ASTMathUtils getRandom:3];
             
+            int random = (int)[ASTMathUtils getRandom:3];
             if (random == 0) {
                 ASTBubble *bubble = [[ASTBubble alloc] initWithImageNamed:@"bubble.png" isDynamic:NO];
                 bubble.position = CGPointMake(30+(30*row), -(30*column)+430);
@@ -56,13 +48,13 @@
         canon.zRotation = 0.0;
         [self addChild:canon];
         
+        ASTGameManager *gm = [ASTGameManager sharedInstance];
+        [gm newLevel];
+        
         display = [[ASTDisplayNode alloc] init];
         display.position = CGPointMake(0, 440);
         [self addChild:display];
         
-        ASTGameManager *gm = [ASTGameManager sharedInstance];
-        [gm newLevel];
-
     }
     return self;
 }
@@ -70,8 +62,6 @@
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
     SKPhysicsBody *firstBody, *secondBody;
-    
-   // NSLog(@"\n\n ++ CONTACT++++++++++++++++++++++++++++++++++++++++++++\n\n");
     
     if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
     {
@@ -83,8 +73,7 @@
         firstBody = contact.bodyB;
         secondBody = contact.bodyA;
     }
-    
-   // NSLog(@"**CONTACT TYPE %i",((firstBody.categoryBitMask & bubbleCategory) != 0));
+
     if ((firstBody.categoryBitMask & bubbleCategory) != 0 || (firstBody.categoryBitMask & projectileCategory) != 0 )
     {
         

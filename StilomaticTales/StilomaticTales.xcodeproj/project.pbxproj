@@ -28,7 +28,7 @@
 		35781DB017E1ED5E00FBD5FC /* ASTMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA417E1ED5E00FBD5FC /* ASTMathUtils.m */; };
 		35781DB117E1ED5E00FBD5FC /* ASTGameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA617E1ED5E00FBD5FC /* ASTGameManager.m */; };
 		35781DB217E1ED5E00FBD5FC /* ASTGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA817E1ED5E00FBD5FC /* ASTGame.m */; };
-		35781DB317E1ED5E00FBD5FC /* ASTCanon.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAA17E1ED5E00FBD5FC /* ASTCanon.m */; };
+		35781DB317E1ED5E00FBD5FC /* ASTVillan.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAA17E1ED5E00FBD5FC /* ASTVillan.m */; };
 		35781DB417E1ED5E00FBD5FC /* ASTBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */; };
 		359662FB17E3219600E29384 /* ASTDisplayNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 359662FA17E3219600E29384 /* ASTDisplayNode.m */; };
 		359662FD17E32CDC00E29384 /* bck.png in Resources */ = {isa = PBXBuildFile; fileRef = 359662FC17E32CDC00E29384 /* bck.png */; };
@@ -74,8 +74,8 @@
 		35781DA717E1ED5E00FBD5FC /* ASTGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGameManager.h; sourceTree = "<group>"; };
 		35781DA817E1ED5E00FBD5FC /* ASTGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTGame.m; sourceTree = "<group>"; };
 		35781DA917E1ED5E00FBD5FC /* ASTGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGame.h; sourceTree = "<group>"; };
-		35781DAA17E1ED5E00FBD5FC /* ASTCanon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTCanon.m; sourceTree = "<group>"; };
-		35781DAB17E1ED5E00FBD5FC /* ASTCanon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTCanon.h; sourceTree = "<group>"; };
+		35781DAA17E1ED5E00FBD5FC /* ASTVillan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTVillan.m; sourceTree = "<group>"; };
+		35781DAB17E1ED5E00FBD5FC /* ASTVillan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTVillan.h; sourceTree = "<group>"; };
 		35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTBubble.m; sourceTree = "<group>"; };
 		35781DAD17E1ED5E00FBD5FC /* ASTBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTBubble.h; sourceTree = "<group>"; };
 		359662F917E3219600E29384 /* ASTDisplayNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTDisplayNode.h; sourceTree = "<group>"; };
@@ -213,8 +213,8 @@
 		35781DB717E1EDAB00FBD5FC /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				35781DAA17E1ED5E00FBD5FC /* ASTCanon.m */,
-				35781DAB17E1ED5E00FBD5FC /* ASTCanon.h */,
+				35781DAB17E1ED5E00FBD5FC /* ASTVillan.h */,
+				35781DAA17E1ED5E00FBD5FC /* ASTVillan.m */,
 				35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */,
 				35781DAD17E1ED5E00FBD5FC /* ASTBubble.h */,
 			);
@@ -336,7 +336,7 @@
 				35781D7217E1ECE000FBD5FC /* main.m in Sources */,
 				35781D7F17E1ECE000FBD5FC /* ASTViewController.m in Sources */,
 				35781DB017E1ED5E00FBD5FC /* ASTMathUtils.m in Sources */,
-				35781DB317E1ED5E00FBD5FC /* ASTCanon.m in Sources */,
+				35781DB317E1ED5E00FBD5FC /* ASTVillan.m in Sources */,
 				35781D7617E1ECE000FBD5FC /* ASTAppDelegate.m in Sources */,
 				35781DB417E1ED5E00FBD5FC /* ASTBubble.m in Sources */,
 				359662FB17E3219600E29384 /* ASTDisplayNode.m in Sources */,

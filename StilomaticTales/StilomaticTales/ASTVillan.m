@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Stilo-studio. All rights reserved.
 //
 
-#import "ASTCanon.h"
+#import "ASTVillan.h"
 
-@implementation ASTCanon
+@implementation ASTVillan
 
 @end

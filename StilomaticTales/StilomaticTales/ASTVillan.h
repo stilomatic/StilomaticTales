@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface ASTCanon : SKSpriteNode
+@interface ASTVillan : SKSpriteNode
 
 @end
