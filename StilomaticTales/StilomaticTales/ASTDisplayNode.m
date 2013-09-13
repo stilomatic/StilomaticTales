@@ -19,6 +19,11 @@
         
         ASTGameManager *gm = [ASTGameManager sharedInstance];
         
+        score = gm.score;
+        energy = gm.playerEnergy;
+        valueEnergy = gm.playerEnergy;
+        valueScore = gm.score;
+        
         [gm addObserver:self forKeyPath:@"playerEnergy" options:NSKeyValueObservingOptionNew context:nil];
         [gm addObserver:self forKeyPath:@"lifes" options:NSKeyValueObservingOptionNew context:nil];
         [gm addObserver:self forKeyPath:@"level" options:NSKeyValueObservingOptionNew context:nil];
@@ -35,7 +40,7 @@
         [self addChild:lifesLabel];
         
         energyLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
-        energyLabel.text = [NSString stringWithFormat:@"Energy: %u",gm.playerEnergy];
+        energyLabel.text = [NSString stringWithFormat:@"Energy: %u",valueEnergy];
         energyLabel.position = CGPointMake(72.0, 2.0);
         energyLabel.fontSize = 11.0;
         [self addChild:energyLabel];
@@ -47,12 +52,10 @@
         [self addChild:levelLabel];
         
         scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
-        scoreLabel.text = [NSString stringWithFormat:@"Score: %u",gm.score];
+        scoreLabel.text = [NSString stringWithFormat:@"Score: %u",valueScore];
         scoreLabel.position = CGPointMake(232.0, 2.0);
         scoreLabel.fontSize = 11.0;
         [self addChild:scoreLabel];
-        
-        
     
     }
     
@@ -61,20 +64,32 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    NSLog(@"\n\n ** DISPLAY UPDATE DATA ** \n\n");
     
     NSInteger value = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
     if ([keyPath isEqualToString:@"playerEnergy"]) {
-        energyLabel.text = [NSString stringWithFormat:@"Energy: %u",value];
+        energy = value;
     }else if ([keyPath isEqualToString:@"lifes"]) {
         lifesLabel.text = [NSString stringWithFormat:@"Lifes: %u",value];
     }else if ([keyPath isEqualToString:@"level"]) {
         levelLabel.text = [NSString stringWithFormat:@"Level: %u",value];
     }else if ([keyPath isEqualToString:@"score"]) {
-        scoreLabel.text = [NSString stringWithFormat:@"Score: %u",value];
+        score = value;
+    }
+}
+
+-(void)update
+{
+    
+    if (valueScore < score) {
+        valueScore++;
     }
     
-
+    if (valueEnergy > energy) {
+        valueEnergy--;
+    }
+    
+    energyLabel.text = [NSString stringWithFormat:@"Energy: %u",valueEnergy];
+    scoreLabel.text = [NSString stringWithFormat:@"Score: %u",valueScore];
 }
 
 @end

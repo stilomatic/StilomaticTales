@@ -130,7 +130,7 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    
+    [display update];
 }
 
 @end

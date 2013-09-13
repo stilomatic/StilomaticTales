@@ -14,8 +14,15 @@
     SKLabelNode *levelLabel;
     SKLabelNode *energyLabel;
     SKLabelNode *scoreLabel;
+    
+    NSInteger life;
+    NSInteger energy;
+    NSInteger score;
+    NSInteger valueEnergy;
+    NSInteger valueScore;
 }
 
 -(id)init;
+-(void)update;
 
 @end
