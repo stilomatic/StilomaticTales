@@ -13,6 +13,7 @@
     SKLabelNode *lifesLabel;
     SKLabelNode *levelLabel;
     SKLabelNode *energyLabel;
+    SKLabelNode *scoreLabel;
 }
 
 -(id)init;

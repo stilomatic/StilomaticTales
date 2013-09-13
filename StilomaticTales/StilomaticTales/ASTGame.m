@@ -8,6 +8,7 @@
 
 #import "ASTGame.h"
 #import "ASTBubble.h"
+#import "ASTGameManager.h"
 
 @implementation ASTGame
 @synthesize canon,projectile,display;
@@ -58,6 +59,9 @@
         display = [[ASTDisplayNode alloc] init];
         display.position = CGPointMake(0, 440);
         [self addChild:display];
+        
+        ASTGameManager *gm = [ASTGameManager sharedInstance];
+        [gm newLevel];
 
     }
     return self;
@@ -67,7 +71,7 @@
 {
     SKPhysicsBody *firstBody, *secondBody;
     
-    NSLog(@"\n\n ++ CONTACT++++++++++++++++++++++++++++++++++++++++++++\n\n");
+   // NSLog(@"\n\n ++ CONTACT++++++++++++++++++++++++++++++++++++++++++++\n\n");
     
     if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
     {
@@ -80,16 +84,18 @@
         secondBody = contact.bodyA;
     }
     
-    NSLog(@"**CONTACT TYPE %i",((firstBody.categoryBitMask & bubbleCategory) != 0));
+   // NSLog(@"**CONTACT TYPE %i",((firstBody.categoryBitMask & bubbleCategory) != 0));
     if ((firstBody.categoryBitMask & bubbleCategory) != 0 || (firstBody.categoryBitMask & projectileCategory) != 0 )
     {
+        
+        ASTGameManager *gm = [ASTGameManager sharedInstance];
+        [gm playerScore:10];
+        
         ASTBubble *buble = (ASTBubble*)firstBody.node;
         [buble runAction:[SKAction scaleBy:1.5 duration:0.5]];
         [buble runAction:[SKAction fadeOutWithDuration:0.5] completion:^{
             [buble removeFromParent];
         }];
-        
-        //[buble hit];
     }
 }
 

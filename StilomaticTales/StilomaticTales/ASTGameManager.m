@@ -23,27 +23,40 @@
     if (self.lifes <= 0) {
         [self gameOver];
     }
+    [self setValue:[NSNumber numberWithInt:self.lifes] forKey:@"lifes"];
 
 }
 -(void)matchWin
 {
     self.lifes++;
     self.level++;
+    [self setValue:[NSNumber numberWithInt:self.lifes] forKey:@"lifes"];
+    [self setValue:[NSNumber numberWithInt:self.level] forKey:@"level"];
 }
 
 -(void)newPlayer{
     
     self.playerEnergy = 20;
+    [self setValue:[NSNumber numberWithInt:self.playerEnergy] forKey:@"playerEnergy"];
+
 }
 
 -(void)newVillan
 {
 
     self.villanEnergy = self.level * 20;
+    [self setValue:[NSNumber numberWithInt:self.villanEnergy] forKey:@"villanEnergy"];
+
 
 }
 
 #pragma mark PUBLIC METHODS
+
+-(void)playerScore:(NSInteger)value
+{
+    self.score += value;
+    [self setValue:[NSNumber numberWithInt:self.score] forKey:@"score"];
+}
 
 -(void)newLevel
 {
@@ -59,6 +72,7 @@
     if (self.villanEnergy <= 0) {
         [self matchWin];
     }
+    [self setValue:[NSNumber numberWithInt:self.villanEnergy] forKey:@"villanEnergy"];
 }
 
 -(void)playerHited
@@ -67,6 +81,7 @@
     if (self.playerEnergy <= 0) {
         [self matchOver];
     }
+    [self setValue:[NSNumber numberWithInt:self.playerEnergy] forKey:@"playerEnergy"];
 }
 
 + (ASTGameManager *)sharedInstance

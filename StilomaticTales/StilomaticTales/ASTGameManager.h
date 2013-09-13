@@ -19,6 +19,7 @@
 -(void)newLevel;
 -(void)villanHited;
 -(void)playerHited;
+-(void)playerScore:(NSInteger)value;
 + (ASTGameManager *)sharedInstance;
 
 @end
