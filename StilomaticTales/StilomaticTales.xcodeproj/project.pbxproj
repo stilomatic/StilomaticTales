@@ -30,6 +30,8 @@
 		35781DB217E1ED5E00FBD5FC /* ASTGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA817E1ED5E00FBD5FC /* ASTGame.m */; };
 		35781DB317E1ED5E00FBD5FC /* ASTCanon.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAA17E1ED5E00FBD5FC /* ASTCanon.m */; };
 		35781DB417E1ED5E00FBD5FC /* ASTBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */; };
+		359662FB17E3219600E29384 /* ASTDisplayNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 359662FA17E3219600E29384 /* ASTDisplayNode.m */; };
+		359662FD17E32CDC00E29384 /* bck.png in Resources */ = {isa = PBXBuildFile; fileRef = 359662FC17E32CDC00E29384 /* bck.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,9 @@
 		35781DAB17E1ED5E00FBD5FC /* ASTCanon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTCanon.h; sourceTree = "<group>"; };
 		35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTBubble.m; sourceTree = "<group>"; };
 		35781DAD17E1ED5E00FBD5FC /* ASTBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTBubble.h; sourceTree = "<group>"; };
+		359662F917E3219600E29384 /* ASTDisplayNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTDisplayNode.h; sourceTree = "<group>"; };
+		359662FA17E3219600E29384 /* ASTDisplayNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTDisplayNode.m; sourceTree = "<group>"; };
+		359662FC17E32CDC00E29384 /* bck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bck.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +142,7 @@
 		35781D6B17E1ECE000FBD5FC /* StilomaticTales */ = {
 			isa = PBXGroup;
 			children = (
+				359662F217E3126E00E29384 /* Score display */,
 				35781DB717E1EDAB00FBD5FC /* Sprites */,
 				35781DB617E1ED8900FBD5FC /* Utils */,
 				35781DB517E1ED7C00FBD5FC /* Assets */,
@@ -188,6 +194,7 @@
 		35781DB517E1ED7C00FBD5FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				359662FC17E32CDC00E29384 /* bck.png */,
 				35781DA217E1ED5E00FBD5FC /* cannon.png */,
 				35781DA317E1ED5E00FBD5FC /* bubble.png */,
 			);
@@ -212,6 +219,15 @@
 				35781DAD17E1ED5E00FBD5FC /* ASTBubble.h */,
 			);
 			name = Sprites;
+			sourceTree = "<group>";
+		};
+		359662F217E3126E00E29384 /* Score display */ = {
+			isa = PBXGroup;
+			children = (
+				359662F917E3219600E29384 /* ASTDisplayNode.h */,
+				359662FA17E3219600E29384 /* ASTDisplayNode.m */,
+			);
+			name = "Score display";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35781DAF17E1ED5E00FBD5FC /* bubble.png in Resources */,
+				359662FD17E32CDC00E29384 /* bck.png in Resources */,
 				35781D8617E1ECE000FBD5FC /* Images.xcassets in Resources */,
 				35781DAE17E1ED5E00FBD5FC /* cannon.png in Resources */,
 				35781D7C17E1ECE000FBD5FC /* Main_iPad.storyboard in Resources */,
@@ -322,6 +339,7 @@
 				35781DB317E1ED5E00FBD5FC /* ASTCanon.m in Sources */,
 				35781D7617E1ECE000FBD5FC /* ASTAppDelegate.m in Sources */,
 				35781DB417E1ED5E00FBD5FC /* ASTBubble.m in Sources */,
+				359662FB17E3219600E29384 /* ASTDisplayNode.m in Sources */,
 				35781DB217E1ED5E00FBD5FC /* ASTGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +555,7 @@
 				35781D9E17E1ECE000FBD5FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35781D9F17E1ECE000FBD5FC /* Build configuration list for PBXNativeTarget "StilomaticTalesTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +564,7 @@
 				35781DA117E1ECE000FBD5FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,7 @@
 #import "ASTBubble.h"
 
 @implementation ASTGame
-@synthesize canon,projectile;
+@synthesize canon,projectile,display;
 
 
 -(id)initWithSize:(CGSize)size {    
@@ -55,8 +55,9 @@
         canon.zRotation = 0.0;
         [self addChild:canon];
         
-
-        
+        display = [[ASTDisplayNode alloc] init];
+        display.position = CGPointMake(0, 440);
+        [self addChild:display];
 
     }
     return self;
