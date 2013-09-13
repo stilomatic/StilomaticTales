@@ -19,7 +19,7 @@
         
         self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
         
-        self.physicsWorld.gravity = CGPointMake(0, 0.0);
+        self.physicsWorld.gravity = CGPointMake(0.0, 0.5);
         self.physicsWorld.speed = 10.0;
         self.physicsWorld.contactDelegate = self;
         
@@ -100,7 +100,7 @@
     projectile.physicsBody.dynamic = YES;
     projectile.physicsBody.contactTestBitMask = bubbleCategory | wallCategory;
     projectile.physicsBody.categoryBitMask = projectileCategory;
-    CGFloat missileLaunchImpulse = -6.0;
+    CGFloat missileLaunchImpulse = -4.0;
     CGFloat angle = (M_PI/2)+canon.zRotation;
     projectile.physicsBody.velocity = CGVectorMake(missileLaunchImpulse,missileLaunchImpulse);
     [projectile.physicsBody applyImpulse: CGVectorMake(missileLaunchImpulse*cosf(angle),
