@@ -18,8 +18,7 @@
     self = [super initWithImageNamed:name];
     if (self) {
         self.gender = [ASTMathUtils getRandom:3];
-        
-        NSLog(@"** BUBBLE GENDER %i",self.gender);
+        self.xScale = self.yScale = 0.4;
         
         if (self.gender == 0) {
             [self runAction:[SKAction colorizeWithColor:[SKColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.5] colorBlendFactor:0.5 duration:1.0]];
@@ -31,7 +30,7 @@
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.size.width/2];
         self.physicsBody.dynamic = dynamic;
         self.physicsBody.categoryBitMask = bubbleCategory;
-        self.physicsBody.contactTestBitMask = projectileCategory;
+        self.physicsBody.contactTestBitMask = projectileCategory | villanCategory;
         self.physicsBody.usesPreciseCollisionDetection = YES;
     }
     return self;

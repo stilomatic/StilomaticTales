@@ -28,6 +28,7 @@
 }
 -(void)matchWin
 {
+    NSLog(@"\n\n MATCH WIN \n\n");
     self.lifes++;
     self.level++;
     [self setValue:[NSNumber numberWithInt:self.lifes] forKey:@"lifes"];

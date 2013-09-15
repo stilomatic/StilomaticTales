@@ -29,32 +29,37 @@
         [gm addObserver:self forKeyPath:@"level" options:NSKeyValueObservingOptionNew context:nil];
         [gm addObserver:self forKeyPath:@"score" options:NSKeyValueObservingOptionNew context:nil];
         
-        SKSpriteNode *bck = [SKSpriteNode spriteNodeWithImageNamed:@"bck.png"];
-        bck.position = CGPointMake(160, 0);
+        SKSpriteNode *bck = [SKSpriteNode spriteNodeWithImageNamed:@"display.png"];
+        bck.position = CGPointMake(160, 10);
+        bck.yScale = 0.5;
         [self addChild:bck];
         
-        lifesLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
+        lifesLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Bold"];
         lifesLabel.text = [NSString stringWithFormat:@"Lifes: %u",gm.lifes];
-        lifesLabel.position = CGPointMake(12.0, 2.0);
+        lifesLabel.position = CGPointMake(42.0, 8.0);
         lifesLabel.fontSize = 11.0;
+        lifesLabel.color = [SKColor colorWithWhite:0.0 alpha:1.0];
         [self addChild:lifesLabel];
         
-        energyLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
+        energyLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Bold"];
         energyLabel.text = [NSString stringWithFormat:@"Energy: %u",valueEnergy];
-        energyLabel.position = CGPointMake(72.0, 2.0);
+        energyLabel.position = CGPointMake(102.0, 8.0);
         energyLabel.fontSize = 11.0;
+        energyLabel.color = [SKColor colorWithWhite:0.0 alpha:1.0];
         [self addChild:energyLabel];
         
-        levelLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
+        levelLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Bold"];
         levelLabel.text = [NSString stringWithFormat:@"Level: %u",gm.level];
-        levelLabel.position = CGPointMake(132.0, 2.0);
+        levelLabel.position = CGPointMake(182.0, 8.0);
         levelLabel.fontSize = 11.0;
+        levelLabel.color = [SKColor colorWithWhite:0.0 alpha:1.0];
         [self addChild:levelLabel];
         
-        scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica"];
+        scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica Bold"];
         scoreLabel.text = [NSString stringWithFormat:@"Score: %u",valueScore];
-        scoreLabel.position = CGPointMake(232.0, 2.0);
+        scoreLabel.position = CGPointMake(242.0, 8.0);
         scoreLabel.fontSize = 11.0;
+        scoreLabel.color = [SKColor colorWithWhite:0.0 alpha:1.0];
         [self addChild:scoreLabel];
     
     }

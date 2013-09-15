@@ -10,4 +10,6 @@
 
 @interface ASTVillan : SKSpriteNode
 
+-(void)update;
+
 @end

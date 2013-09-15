@@ -13,6 +13,7 @@
 static const uint32_t bubbleCategory     =  0x1 << 0;
 static const uint32_t projectileCategory =  0x1 << 1;
 static const uint32_t wallCategory       =  0x1 << 2;
+static const uint32_t villanCategory     =  0x1 << 3;
 
 @interface ASTMathUtils : NSObject
 

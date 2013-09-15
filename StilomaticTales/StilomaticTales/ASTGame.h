@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "ASTBubble.h"
+#import "ASTVillan.h"
 #import "ASTDisplayNode.h"
 #import "ASTMathUtils.h"
 
@@ -15,6 +16,7 @@
 
 @property (nonatomic,strong) SKSpriteNode *canon;
 @property (nonatomic,strong) ASTBubble *projectile;
+@property (nonatomic,strong) ASTVillan *villan;
 @property (nonatomic,strong) ASTDisplayNode *display;
 
 

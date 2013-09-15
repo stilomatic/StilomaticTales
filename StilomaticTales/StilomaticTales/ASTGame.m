@@ -11,7 +11,7 @@
 #import "ASTGameManager.h"
 
 @implementation ASTGame
-@synthesize canon,projectile,display;
+@synthesize canon,projectile,villan,display;
 
 
 -(id)initWithSize:(CGSize)size {    
@@ -28,7 +28,7 @@
         
         for(int i = 0; i < 80; i++){
             
-            int random = (int)[ASTMathUtils getRandom:3];
+            int random = (int)[ASTMathUtils getRandom:6];
             if (random == 0) {
                 ASTBubble *bubble = [[ASTBubble alloc] initWithImageNamed:@"bubble.png" isDynamic:NO];
                 bubble.position = CGPointMake(30+(30*row), -(30*column)+430);
@@ -43,9 +43,14 @@
 
         }
         
+        villan = [[ASTVillan alloc] initWithImageNamed:@"villan_0.png"];
+        villan.position = CGPointMake(160, 300);
+        [self addChild:villan];
+        
         canon = [[SKSpriteNode alloc] initWithImageNamed:@"cannon.png"];
-        canon.position = CGPointMake(160, 40);
-        canon.zRotation = 0.0;
+        canon.position = CGPointMake(160, 30);
+        canon.zRotation = M_PI;
+        canon.anchorPoint = CGPointMake(0.5, 1.0);
         [self addChild:canon];
         
         ASTGameManager *gm = [ASTGameManager sharedInstance];
@@ -86,17 +91,30 @@
             [buble removeFromParent];
         }];
     }
+    
+    if ((firstBody.categoryBitMask & villanCategory) != 0 || (firstBody.categoryBitMask & projectileCategory) != 0 )
+    {
+        
+        ASTGameManager *gm = [ASTGameManager sharedInstance];
+        [gm playerScore:20];
+        [gm villanHited];
+    }
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
 
-    projectile = [[ASTBubble alloc] initWithImageNamed:@"bubble.png" isDynamic:NO];
-    projectile.position = CGPointMake(160, 40);
-    [self addChild:projectile];
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+        canon.zRotation = -atan2(canon.position.x-location.x, canon.position.y-location.y);
+    }
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    projectile = [[ASTBubble alloc] initWithImageNamed:@"bubble.png" isDynamic:NO];
+    projectile.position = CGPointMake(160, 80);
+    [self addChild:projectile];
     projectile.physicsBody.dynamic = YES;
     projectile.physicsBody.contactTestBitMask = bubbleCategory | wallCategory;
     projectile.physicsBody.categoryBitMask = projectileCategory;
@@ -120,6 +138,7 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     [display update];
+    [villan update];
 }
 
 @end
