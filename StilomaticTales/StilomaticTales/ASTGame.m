@@ -101,7 +101,7 @@
         [self hit:firstBody.node];
     }
     
-    if ((firstBody.categoryBitMask & villanCategory) != 0)
+    if ((secondBody.categoryBitMask & villanCategory) != 0)
     {
         [gm playerScore:20];
         [gm villanHited];
@@ -136,6 +136,7 @@
     tmpProjectile.physicsBody.categoryBitMask = projectileCategory;
     tmpProjectile.physicsBody.contactTestBitMask = villanCategory | bubbleCategory | wallCategory;
     tmpProjectile.physicsBody.collisionBitMask = villanCategory | bubbleCategory | wallCategory;
+    tmpProjectile.physicsBody.usesPreciseCollisionDetection = YES;
     CGFloat missileLaunchImpulse = 700.0;
     CGFloat angle = (M_PI/2) - canon.zRotation;
     tmpProjectile.physicsBody.velocity = CGVectorMake(missileLaunchImpulse*cosf(angle),
@@ -179,7 +180,6 @@
     [node runAction:[SKAction fadeOutWithDuration:0.5] completion:^{
         [node removeFromParent];
     }];
-
 }
 
 -(void)launchMissile

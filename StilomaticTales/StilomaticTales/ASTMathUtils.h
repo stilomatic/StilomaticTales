@@ -18,6 +18,6 @@ static const uint32_t wallCategory       =  0x1 << 4;
 
 @interface ASTMathUtils : NSObject
 
-+(CGFloat)getRandom:(NSInteger)limit;
++(CGFloat)getRandom:(CGFloat)limit;
 
 @end

@@ -26,6 +26,7 @@
         self.physicsBody.categoryBitMask = villanCategory;
         self.physicsBody.contactTestBitMask = projectileCategory;
         self.physicsBody.collisionBitMask = projectileCategory;
+        self.physicsBody.usesPreciseCollisionDetection = YES;
     }
     
     return self;
@@ -36,7 +37,7 @@
     if ([ASTMathUtils getRandom:10] == 0 && !self.hasActions) {
         [self runAction:[SKAction moveToX:[ASTMathUtils getRandom:320] duration:1.5]];
         [self runAction:[SKAction moveToY:140+[ASTMathUtils getRandom:320] duration:1.5]];
-        [self runAction:[SKAction scaleTo:0.3+[ASTMathUtils getRandom:1] duration:1.5]];
+        [self runAction:[SKAction scaleTo:0.3+[ASTMathUtils getRandom:1.5] duration:1.5]];
     }
 }
 

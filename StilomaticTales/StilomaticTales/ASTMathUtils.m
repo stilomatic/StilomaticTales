@@ -10,7 +10,7 @@
 
 @implementation ASTMathUtils
 
-+(CGFloat)getRandom:(NSInteger)limit
++(CGFloat)getRandom:(CGFloat)limit
 {
     
     return floorf(((double)arc4random() / ARC4RANDOM_MAX) * limit);
