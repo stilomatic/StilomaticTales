@@ -8,6 +8,7 @@
 
 #import "ASTVillan.h"
 #import "ASTMathUtils.h"
+#import "ASTGame.h"
 
 @implementation ASTVillan
 
@@ -25,7 +26,6 @@
         self.physicsBody.categoryBitMask = villanCategory;
         self.physicsBody.contactTestBitMask = projectileCategory;
         self.physicsBody.collisionBitMask = projectileCategory;
-        self.name = @"villan";
     }
     
     return self;

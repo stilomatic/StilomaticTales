@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		351C2A9D17E73F4B00C92620 /* ASTMissile.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C2A9C17E73F4B00C92620 /* ASTMissile.m */; };
+		351C2A9F17E74E8800C92620 /* wall.png in Resources */ = {isa = PBXBuildFile; fileRef = 351C2A9E17E74E8800C92620 /* wall.png */; };
 		3550908817E6F48200FC6BA7 /* missile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3550908717E6F48200FC6BA7 /* missile.png */; };
 		35781D6417E1ECE000FBD5FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6317E1ECE000FBD5FC /* Foundation.framework */; };
 		35781D6617E1ECE000FBD5FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6517E1ECE000FBD5FC /* CoreGraphics.framework */; };
@@ -47,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		351C2A9B17E73F4B00C92620 /* ASTMissile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTMissile.h; sourceTree = "<group>"; };
+		351C2A9C17E73F4B00C92620 /* ASTMissile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTMissile.m; sourceTree = "<group>"; };
+		351C2A9E17E74E8800C92620 /* wall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wall.png; path = Base.lproj/Assets/wall.png; sourceTree = "<group>"; };
 		3550908717E6F48200FC6BA7 /* missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = missile.png; path = Base.lproj/Assets/missile.png; sourceTree = "<group>"; };
 		35781D6017E1ECE000FBD5FC /* StilomaticTales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StilomaticTales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35781D6317E1ECE000FBD5FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -198,6 +203,7 @@
 		35781DB517E1ED7C00FBD5FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				351C2A9E17E74E8800C92620 /* wall.png */,
 				3550908717E6F48200FC6BA7 /* missile.png */,
 				60351E2517E635D500AF382B /* cannon.png */,
 				60351E1D17E6359F00AF382B /* display.png */,
@@ -210,8 +216,8 @@
 		35781DB617E1ED8900FBD5FC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				35781DA417E1ED5E00FBD5FC /* ASTMathUtils.m */,
 				35781DA517E1ED5E00FBD5FC /* ASTMathUtils.h */,
+				35781DA417E1ED5E00FBD5FC /* ASTMathUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -224,6 +230,8 @@
 				35781DAA17E1ED5E00FBD5FC /* ASTVillan.m */,
 				35781DAD17E1ED5E00FBD5FC /* ASTBubble.h */,
 				35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */,
+				351C2A9B17E73F4B00C92620 /* ASTMissile.h */,
+				351C2A9C17E73F4B00C92620 /* ASTMissile.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35781D8617E1ECE000FBD5FC /* Images.xcassets in Resources */,
+				351C2A9F17E74E8800C92620 /* wall.png in Resources */,
 				35781D7C17E1ECE000FBD5FC /* Main_iPad.storyboard in Resources */,
 				60351E2617E635D500AF382B /* cannon.png in Resources */,
 				3550908817E6F48200FC6BA7 /* missile.png in Resources */,
@@ -351,6 +360,7 @@
 				35781DB117E1ED5E00FBD5FC /* ASTGameManager.m in Sources */,
 				35781D7217E1ECE000FBD5FC /* main.m in Sources */,
 				35781D7F17E1ECE000FBD5FC /* ASTViewController.m in Sources */,
+				351C2A9D17E73F4B00C92620 /* ASTMissile.m in Sources */,
 				35781DB017E1ED5E00FBD5FC /* ASTMathUtils.m in Sources */,
 				35781DB317E1ED5E00FBD5FC /* ASTVillan.m in Sources */,
 				35781D7617E1ECE000FBD5FC /* ASTAppDelegate.m in Sources */,
