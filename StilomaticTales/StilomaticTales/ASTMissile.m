@@ -21,9 +21,9 @@
         self.physicsBody.collisionBitMask = projectileCategory | wallCategory;
         self.physicsBody.contactTestBitMask = projectileCategory | wallCategory;
         self.physicsBody.velocity = CGVectorMake(0.0, 2.0);
-        self.physicsBody.friction = -0.9;
+        self.physicsBody.friction = 0.9;
         self.physicsBody.linearDamping = 0.4;
-        self.physicsBody.mass = -2.0;
+        self.physicsBody.mass = 2.0;
         self.physicsBody.affectedByGravity = YES;
     }
     

@@ -15,7 +15,6 @@
 @interface ASTGame : SKScene <SKPhysicsContactDelegate>
 
 @property (nonatomic,strong) NSMutableArray *projectiles;
-@property (nonatomic,strong) NSMutableArray *missiles;
 
 @property (nonatomic,strong) SKSpriteNode *bottom;
 @property (nonatomic,strong) SKSpriteNode *canon;

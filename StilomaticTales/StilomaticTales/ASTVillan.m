@@ -19,7 +19,7 @@
         self.xScale = self.yScale = 0.5;
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.size.width/3];
         self.physicsBody.density = 100.0;
-        self.physicsBody.velocity = CGVectorMake(0.0, 1.0);
+        self.physicsBody.velocity = CGVectorMake(0.0, 0.0);
         self.physicsBody.mass = 100.0;
         self.physicsBody.friction = 1000.0;
         self.physicsBody.linearDamping = 100.0;
