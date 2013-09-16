@@ -30,8 +30,10 @@
         self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.size.width/2];
         self.physicsBody.dynamic = dynamic;
         self.physicsBody.categoryBitMask = bubbleCategory;
-        self.physicsBody.contactTestBitMask = projectileCategory | villanCategory;
+        self.physicsBody.contactTestBitMask = projectileCategory;
+        self.physicsBody.collisionBitMask = projectileCategory;
         self.physicsBody.usesPreciseCollisionDetection = YES;
+        self.name = @"buble";
     }
     return self;
 }

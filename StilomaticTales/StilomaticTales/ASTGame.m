@@ -78,8 +78,13 @@
         firstBody = contact.bodyB;
         secondBody = contact.bodyA;
     }
-
-    if ((firstBody.categoryBitMask & bubbleCategory) != 0 || (firstBody.categoryBitMask & projectileCategory) != 0 )
+    NSLog(@"** CONTACT----------\n %d: %d \n %d: %d\n-------------",
+          firstBody.categoryBitMask,
+          (firstBody.categoryBitMask & bubbleCategory),
+          secondBody.categoryBitMask,
+          (secondBody.categoryBitMask & projectileCategory));
+    
+    if ((firstBody.categoryBitMask & bubbleCategory)  != 0)
     {
         
         ASTGameManager *gm = [ASTGameManager sharedInstance];
@@ -92,7 +97,7 @@
         }];
     }
     
-    if ((firstBody.categoryBitMask & villanCategory) != 0 || (firstBody.categoryBitMask & projectileCategory) != 0 )
+    if ((firstBody.categoryBitMask & projectileCategory) != 0)
     {
         
         ASTGameManager *gm = [ASTGameManager sharedInstance];
@@ -116,8 +121,10 @@
     projectile.position = CGPointMake(160, 80);
     [self addChild:projectile];
     projectile.physicsBody.dynamic = YES;
-    projectile.physicsBody.contactTestBitMask = bubbleCategory | wallCategory;
     projectile.physicsBody.categoryBitMask = projectileCategory;
+    projectile.physicsBody.contactTestBitMask = villanCategory | bubbleCategory;
+    projectile.physicsBody.collisionBitMask = villanCategory | bubbleCategory;
+    projectile.name = @"projectile";
     CGFloat missileLaunchImpulse = -4.0;
     CGFloat angle = (M_PI/2)+canon.zRotation;
     projectile.physicsBody.velocity = CGVectorMake(missileLaunchImpulse,missileLaunchImpulse);

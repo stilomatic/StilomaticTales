@@ -22,8 +22,10 @@
         self.physicsBody.mass = 100.0;
         self.physicsBody.friction = 1000.0;
         self.physicsBody.linearDamping = 100.0;
-        self.physicsBody.collisionBitMask = villanCategory;
+        self.physicsBody.categoryBitMask = villanCategory;
         self.physicsBody.contactTestBitMask = projectileCategory;
+        self.physicsBody.collisionBitMask = projectileCategory;
+        self.name = @"villan";
     }
     
     return self;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3550908817E6F48200FC6BA7 /* missile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3550908717E6F48200FC6BA7 /* missile.png */; };
 		35781D6417E1ECE000FBD5FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6317E1ECE000FBD5FC /* Foundation.framework */; };
 		35781D6617E1ECE000FBD5FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6517E1ECE000FBD5FC /* CoreGraphics.framework */; };
 		35781D6817E1ECE000FBD5FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35781D6717E1ECE000FBD5FC /* UIKit.framework */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3550908717E6F48200FC6BA7 /* missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = missile.png; path = Base.lproj/Assets/missile.png; sourceTree = "<group>"; };
 		35781D6017E1ECE000FBD5FC /* StilomaticTales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StilomaticTales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35781D6317E1ECE000FBD5FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35781D6517E1ECE000FBD5FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,6 +198,7 @@
 		35781DB517E1ED7C00FBD5FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3550908717E6F48200FC6BA7 /* missile.png */,
 				60351E2517E635D500AF382B /* cannon.png */,
 				60351E1D17E6359F00AF382B /* display.png */,
 				60351E1E17E6359F00AF382B /* bubble.png */,
@@ -321,6 +324,7 @@
 				35781D8617E1ECE000FBD5FC /* Images.xcassets in Resources */,
 				35781D7C17E1ECE000FBD5FC /* Main_iPad.storyboard in Resources */,
 				60351E2617E635D500AF382B /* cannon.png in Resources */,
+				3550908817E6F48200FC6BA7 /* missile.png in Resources */,
 				35781D7917E1ECE000FBD5FC /* Main_iPhone.storyboard in Resources */,
 				35781D7017E1ECE000FBD5FC /* InfoPlist.strings in Resources */,
 				60351E2017E6359F00AF382B /* display.png in Resources */,
