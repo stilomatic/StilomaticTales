@@ -23,6 +23,7 @@
 @property (nonatomic,strong) ASTVillan *villan;
 @property (nonatomic,strong) ASTDisplayNode *display;
 
+-(id)initWithSize:(CGSize)size andProperties:(NSDictionary*)level;
 -(void)launchProjectile;
 -(void)launchMissile;
 -(void)hit:(SKNode*)node;

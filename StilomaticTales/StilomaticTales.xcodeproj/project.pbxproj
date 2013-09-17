@@ -153,7 +153,7 @@
 		35781D6B17E1ECE000FBD5FC /* StilomaticTales */ = {
 			isa = PBXGroup;
 			children = (
-				60A0796917E82C40003FB1A1 /* Model */,
+				60A0796D17E82C8F003FB1A1 /* levels.plist */,
 				359662F217E3126E00E29384 /* Score display */,
 				35781DB717E1EDAB00FBD5FC /* Sprites */,
 				35781DB617E1ED8900FBD5FC /* Utils */,
@@ -253,14 +253,6 @@
 			children = (
 			);
 			name = Villans;
-			sourceTree = "<group>";
-		};
-		60A0796917E82C40003FB1A1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				60A0796D17E82C8F003FB1A1 /* levels.plist */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

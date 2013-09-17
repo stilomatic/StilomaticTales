@@ -25,8 +25,7 @@
     NSArray *levels = [NSArray arrayWithContentsOfFile:plistPath];
     
     
-    ASTGameScene *scene = [ASTGameScene sceneWithSize:skView.bounds.size];
-    scene.levelProperties = [levels objectAtIndex:0];
+    ASTGameScene *scene = [[ASTGameScene alloc] initWithSize:skView.bounds.size andProperties:[levels objectAtIndex:0]];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     [skView presentScene:scene];
 }

@@ -15,18 +15,19 @@
 @synthesize projectiles,canon,villan,display,bottom,levelProperties;
 
 
--(id)initWithSize:(CGSize)size
+-(id)initWithSize:(CGSize)size andProperties:(NSDictionary*)level
 {
 
     if (self = [super initWithSize:size]) {
         
+        levelProperties = level;
         ASTGameManager *gm = [ASTGameManager sharedInstance];
         [gm newLevel];
         
         projectiles = [NSMutableArray array];
         
         self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-        CGFloat gravity = [[levelProperties objectForKey:@"worldGravity"] floatValue] * 0.5;
+        CGFloat gravity = [[levelProperties objectForKey:@"worldGravity"] floatValue] * -0.5;
         self.physicsWorld.gravity = CGPointMake(0.0, gravity);
         self.physicsWorld.speed = [[levelProperties objectForKey:@"worldSpeed"] floatValue];
         self.physicsWorld.contactDelegate = self;
@@ -46,7 +47,7 @@
         int row = 0;
         int column = 0;
         
-        for(int i = 0; i < 80; i++){
+        for(int i = 0; i < [[levelProperties objectForKey:@"shields"] integerValue]; i++){
             
             int random = (int)[ASTMathUtils getRandom:6];
             if (random == 0) {
@@ -180,11 +181,13 @@
 {
     SKSpriteNode *tmpProjectile = [[SKSpriteNode alloc] initWithImageNamed:@"bubble.png"];
     tmpProjectile.position = CGPointMake(160.0, 80.0);
+    tmpProjectile.xScale = tmpProjectile.yScale = 0.5;
+    tmpProjectile.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:tmpProjectile.size.width*0.5];
     tmpProjectile.physicsBody.dynamic = YES;
     tmpProjectile.physicsBody.categoryBitMask = projectileCategory;
     tmpProjectile.physicsBody.contactTestBitMask = villanCategory | shieldCategory | wallCategory;
     tmpProjectile.physicsBody.collisionBitMask = villanCategory | shieldCategory | wallCategory;
-    tmpProjectile.physicsBody.usesPreciseCollisionDetection = YES;
+    //tmpProjectile.physicsBody.usesPreciseCollisionDetection = YES;
     CGFloat missileLaunchImpulse = [[levelProperties objectForKey:@"projectileImpulse"] floatValue];
     CGFloat angle = (M_PI/2) - canon.zRotation;
     CGVector vector = CGVectorMake(missileLaunchImpulse*cosf(angle), missileLaunchImpulse*sinf(angle));
