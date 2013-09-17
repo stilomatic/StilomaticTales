@@ -7,13 +7,15 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "ASTBubble.h"
+#import "ASTShield.h"
 #import "ASTVillan.h"
 #import "ASTDisplayNode.h"
 #import "ASTMathUtils.h"
 
-@interface ASTGame : SKScene <SKPhysicsContactDelegate>
+@interface ASTGameScene : SKScene <SKPhysicsContactDelegate>
 
+
+@property (nonatomic,strong) NSDictionary *levelProperties;
 @property (nonatomic,strong) NSMutableArray *projectiles;
 
 @property (nonatomic,strong) SKSpriteNode *bottom;

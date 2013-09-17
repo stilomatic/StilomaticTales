@@ -8,11 +8,10 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface ASTBubble : SKSpriteNode
+@interface ASTShield : SKSpriteNode
 
 @property (nonatomic) NSInteger gender;
 
--(id)initWithImageNamed:(NSString *)name isDynamic:(BOOL)dynamic;
--(void)hit;
+-(id)initWithImageNamed:(NSString *)name;
 
 @end

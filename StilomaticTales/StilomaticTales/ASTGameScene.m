@@ -6,24 +6,29 @@
 //  Copyright (c) 2013 Stilo-studio. All rights reserved.
 //
 
-#import "ASTGame.h"
-#import "ASTBubble.h"
+#import "ASTGameScene.h"
+#import "ASTShield.h"
 #import "ASTGameManager.h"
 #import "ASTMissile.h"
 
-@implementation ASTGame
-@synthesize projectiles,canon,villan,display,bottom;
+@implementation ASTGameScene
+@synthesize projectiles,canon,villan,display,bottom,levelProperties;
 
 
--(id)initWithSize:(CGSize)size {    
+-(id)initWithSize:(CGSize)size
+{
+
     if (self = [super initWithSize:size]) {
+        
+        ASTGameManager *gm = [ASTGameManager sharedInstance];
+        [gm newLevel];
         
         projectiles = [NSMutableArray array];
         
         self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-        
-        self.physicsWorld.gravity = CGPointMake(0.0, -0.5);
-        self.physicsWorld.speed = 6.0;
+        CGFloat gravity = [[levelProperties objectForKey:@"worldGravity"] floatValue] * 0.5;
+        self.physicsWorld.gravity = CGPointMake(0.0, gravity);
+        self.physicsWorld.speed = [[levelProperties objectForKey:@"worldSpeed"] floatValue];
         self.physicsWorld.contactDelegate = self;
 
         
@@ -45,9 +50,9 @@
             
             int random = (int)[ASTMathUtils getRandom:6];
             if (random == 0) {
-                ASTBubble *bubble = [[ASTBubble alloc] initWithImageNamed:@"bubble.png" isDynamic:NO];
-                bubble.position = CGPointMake(30+(30*row), -(30*column)+430);
-                [self addChild:bubble];
+                ASTShield *shield = [[ASTShield alloc] initWithImageNamed:@"bubble.png"];
+                shield.position = CGPointMake(30+(30*row), -(30*column)+430);
+                [self addChild:shield];
             }
             
             row++;
@@ -58,18 +63,15 @@
 
         }
         
-        villan = [[ASTVillan alloc] initWithImageNamed:@"villan_0.png"];
-        villan.position = CGPointMake(160, 300);
+        villan = [[ASTVillan alloc] initWithImageNamed:[levelProperties objectForKey:@"villan"]];
+        villan.position = CGPointMake(size.width/2, size.height/2);
         [self addChild:villan];
         
         canon = [[SKSpriteNode alloc] initWithImageNamed:@"cannon.png"];
-        canon.position = CGPointMake(160, 30);
+        canon.position = CGPointMake(size.width/2, 30);
         canon.zRotation = M_PI;
         canon.anchorPoint = CGPointMake(0.5, 1.0);
         [self addChild:canon];
-        
-        ASTGameManager *gm = [ASTGameManager sharedInstance];
-        [gm newLevel];
         
         display = [[ASTDisplayNode alloc] init];
         display.position = CGPointMake(0, 440);
@@ -95,7 +97,7 @@
         secondBody = contact.bodyA;
     }
     
-    if ((firstBody.categoryBitMask & bubbleCategory)  != 0)
+    if ((firstBody.categoryBitMask & shieldCategory)  != 0)
     {
         [gm playerScore:10];
         [self hit:firstBody.node];
@@ -144,7 +146,7 @@
 -(void)update:(CFTimeInterval)currentTime {
     
     [projectiles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        ASTBubble *projectile = (ASTBubble*)obj;
+        SKSpriteNode *projectile = (SKSpriteNode*)obj;
         if (projectile.position.x < 0.0 || projectile.position.x > 320.0) {
             [projectile removeFromParent];
             [projectiles removeObject:projectile];
@@ -154,7 +156,8 @@
     
     [display update];
     [villan update];
-    if ([ASTMathUtils getRandom:50]==0) {
+    
+    if ([ASTMathUtils getRandom:[[levelProperties objectForKey:@"missileFrequency"] floatValue]] == 0) {
         [self launchMissile];
     }
 }
@@ -175,19 +178,18 @@
 
 -(void)launchProjectile
 {
-    ASTBubble *tmpProjectile = [[ASTBubble alloc] initWithImageNamed:@"bubble.png" isDynamic:NO];
+    SKSpriteNode *tmpProjectile = [[SKSpriteNode alloc] initWithImageNamed:@"bubble.png"];
     tmpProjectile.position = CGPointMake(160.0, 80.0);
     tmpProjectile.physicsBody.dynamic = YES;
     tmpProjectile.physicsBody.categoryBitMask = projectileCategory;
-    tmpProjectile.physicsBody.contactTestBitMask = villanCategory | bubbleCategory | wallCategory;
-    tmpProjectile.physicsBody.collisionBitMask = villanCategory | bubbleCategory | wallCategory;
+    tmpProjectile.physicsBody.contactTestBitMask = villanCategory | shieldCategory | wallCategory;
+    tmpProjectile.physicsBody.collisionBitMask = villanCategory | shieldCategory | wallCategory;
     tmpProjectile.physicsBody.usesPreciseCollisionDetection = YES;
-    CGFloat missileLaunchImpulse = 700.0;
+    CGFloat missileLaunchImpulse = [[levelProperties objectForKey:@"projectileImpulse"] floatValue];
     CGFloat angle = (M_PI/2) - canon.zRotation;
-    tmpProjectile.physicsBody.velocity = CGVectorMake(missileLaunchImpulse*cosf(angle),
-                                                      missileLaunchImpulse*sinf(angle));
-    [tmpProjectile.physicsBody applyImpulse: CGVectorMake(missileLaunchImpulse*cosf(angle),
-                                                          missileLaunchImpulse*sinf(angle))];
+    CGVector vector = CGVectorMake(missileLaunchImpulse*cosf(angle), missileLaunchImpulse*sinf(angle));
+    tmpProjectile.physicsBody.velocity = vector;
+    [tmpProjectile.physicsBody applyImpulse:vector];
     [self addChild:tmpProjectile];
     [projectiles addObject:tmpProjectile];
 }

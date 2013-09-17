@@ -8,7 +8,7 @@
 
 #import "ASTVillan.h"
 #import "ASTMathUtils.h"
-#import "ASTGame.h"
+#import "ASTGameScene.h"
 
 @implementation ASTVillan
 

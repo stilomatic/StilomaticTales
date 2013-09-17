@@ -28,15 +28,14 @@
 		35781D9917E1ECE000FBD5FC /* StilomaticTalesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781D9817E1ECE000FBD5FC /* StilomaticTalesTests.m */; };
 		35781DB017E1ED5E00FBD5FC /* ASTMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA417E1ED5E00FBD5FC /* ASTMathUtils.m */; };
 		35781DB117E1ED5E00FBD5FC /* ASTGameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA617E1ED5E00FBD5FC /* ASTGameManager.m */; };
-		35781DB217E1ED5E00FBD5FC /* ASTGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA817E1ED5E00FBD5FC /* ASTGame.m */; };
+		35781DB217E1ED5E00FBD5FC /* ASTGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DA817E1ED5E00FBD5FC /* ASTGameScene.m */; };
 		35781DB317E1ED5E00FBD5FC /* ASTVillan.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAA17E1ED5E00FBD5FC /* ASTVillan.m */; };
-		35781DB417E1ED5E00FBD5FC /* ASTBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */; };
+		35781DB417E1ED5E00FBD5FC /* ASTShield.m in Sources */ = {isa = PBXBuildFile; fileRef = 35781DAC17E1ED5E00FBD5FC /* ASTShield.m */; };
 		359662FB17E3219600E29384 /* ASTDisplayNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 359662FA17E3219600E29384 /* ASTDisplayNode.m */; };
 		60351E2017E6359F00AF382B /* display.png in Resources */ = {isa = PBXBuildFile; fileRef = 60351E1D17E6359F00AF382B /* display.png */; };
 		60351E2117E6359F00AF382B /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 60351E1E17E6359F00AF382B /* bubble.png */; };
 		60351E2217E6359F00AF382B /* villan_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 60351E1F17E6359F00AF382B /* villan_0.png */; };
 		60351E2617E635D500AF382B /* cannon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60351E2517E635D500AF382B /* cannon.png */; };
-		60A0796C17E82C5D003FB1A1 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A0796B17E82C5D003FB1A1 /* Level.m */; };
 		60A0796E17E82C8F003FB1A1 /* levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60A0796D17E82C8F003FB1A1 /* levels.plist */; };
 /* End PBXBuildFile section */
 
@@ -80,20 +79,18 @@
 		35781DA517E1ED5E00FBD5FC /* ASTMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTMathUtils.h; sourceTree = "<group>"; };
 		35781DA617E1ED5E00FBD5FC /* ASTGameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTGameManager.m; sourceTree = "<group>"; };
 		35781DA717E1ED5E00FBD5FC /* ASTGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGameManager.h; sourceTree = "<group>"; };
-		35781DA817E1ED5E00FBD5FC /* ASTGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTGame.m; sourceTree = "<group>"; };
-		35781DA917E1ED5E00FBD5FC /* ASTGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGame.h; sourceTree = "<group>"; };
+		35781DA817E1ED5E00FBD5FC /* ASTGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTGameScene.m; sourceTree = "<group>"; };
+		35781DA917E1ED5E00FBD5FC /* ASTGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGameScene.h; sourceTree = "<group>"; };
 		35781DAA17E1ED5E00FBD5FC /* ASTVillan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTVillan.m; sourceTree = "<group>"; };
 		35781DAB17E1ED5E00FBD5FC /* ASTVillan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTVillan.h; sourceTree = "<group>"; };
-		35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTBubble.m; sourceTree = "<group>"; };
-		35781DAD17E1ED5E00FBD5FC /* ASTBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTBubble.h; sourceTree = "<group>"; };
+		35781DAC17E1ED5E00FBD5FC /* ASTShield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTShield.m; sourceTree = "<group>"; };
+		35781DAD17E1ED5E00FBD5FC /* ASTShield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTShield.h; sourceTree = "<group>"; };
 		359662F917E3219600E29384 /* ASTDisplayNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTDisplayNode.h; sourceTree = "<group>"; };
 		359662FA17E3219600E29384 /* ASTDisplayNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTDisplayNode.m; sourceTree = "<group>"; };
 		60351E1D17E6359F00AF382B /* display.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = display.png; path = Base.lproj/Assets/display.png; sourceTree = "<group>"; };
 		60351E1E17E6359F00AF382B /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble.png; path = Base.lproj/Assets/bubble.png; sourceTree = "<group>"; };
 		60351E1F17E6359F00AF382B /* villan_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = villan_0.png; path = Base.lproj/Assets/villan_0.png; sourceTree = "<group>"; };
 		60351E2517E635D500AF382B /* cannon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cannon.png; sourceTree = "<group>"; };
-		60A0796A17E82C5D003FB1A1 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
-		60A0796B17E82C5D003FB1A1 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
 		60A0796D17E82C8F003FB1A1 /* levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = levels.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,8 +160,8 @@
 				35781DB517E1ED7C00FBD5FC /* Assets */,
 				35781DA717E1ED5E00FBD5FC /* ASTGameManager.h */,
 				35781DA617E1ED5E00FBD5FC /* ASTGameManager.m */,
-				35781DA917E1ED5E00FBD5FC /* ASTGame.h */,
-				35781DA817E1ED5E00FBD5FC /* ASTGame.m */,
+				35781DA917E1ED5E00FBD5FC /* ASTGameScene.h */,
+				35781DA817E1ED5E00FBD5FC /* ASTGameScene.m */,
 				35781D7417E1ECE000FBD5FC /* ASTAppDelegate.h */,
 				35781D7517E1ECE000FBD5FC /* ASTAppDelegate.m */,
 				35781D7717E1ECE000FBD5FC /* Main_iPhone.storyboard */,
@@ -234,8 +231,8 @@
 				60351E1617E5B33F00AF382B /* Villans */,
 				35781DAB17E1ED5E00FBD5FC /* ASTVillan.h */,
 				35781DAA17E1ED5E00FBD5FC /* ASTVillan.m */,
-				35781DAD17E1ED5E00FBD5FC /* ASTBubble.h */,
-				35781DAC17E1ED5E00FBD5FC /* ASTBubble.m */,
+				35781DAD17E1ED5E00FBD5FC /* ASTShield.h */,
+				35781DAC17E1ED5E00FBD5FC /* ASTShield.m */,
 				351C2A9B17E73F4B00C92620 /* ASTMissile.h */,
 				351C2A9C17E73F4B00C92620 /* ASTMissile.m */,
 			);
@@ -261,8 +258,6 @@
 		60A0796917E82C40003FB1A1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				60A0796A17E82C5D003FB1A1 /* Level.h */,
-				60A0796B17E82C5D003FB1A1 /* Level.m */,
 				60A0796D17E82C8F003FB1A1 /* levels.plist */,
 			);
 			name = Model;
@@ -375,16 +370,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				35781DB117E1ED5E00FBD5FC /* ASTGameManager.m in Sources */,
-				60A0796C17E82C5D003FB1A1 /* Level.m in Sources */,
 				35781D7217E1ECE000FBD5FC /* main.m in Sources */,
 				35781D7F17E1ECE000FBD5FC /* ASTViewController.m in Sources */,
 				351C2A9D17E73F4B00C92620 /* ASTMissile.m in Sources */,
 				35781DB017E1ED5E00FBD5FC /* ASTMathUtils.m in Sources */,
 				35781DB317E1ED5E00FBD5FC /* ASTVillan.m in Sources */,
 				35781D7617E1ECE000FBD5FC /* ASTAppDelegate.m in Sources */,
-				35781DB417E1ED5E00FBD5FC /* ASTBubble.m in Sources */,
+				35781DB417E1ED5E00FBD5FC /* ASTShield.m in Sources */,
 				359662FB17E3219600E29384 /* ASTDisplayNode.m in Sources */,
-				35781DB217E1ED5E00FBD5FC /* ASTGame.m in Sources */,
+				35781DB217E1ED5E00FBD5FC /* ASTGameScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

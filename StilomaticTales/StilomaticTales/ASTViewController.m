@@ -7,7 +7,7 @@
 //
 
 #import "ASTViewController.h"
-#import "ASTGame.h"
+#import "ASTGameScene.h"
 
 @implementation ASTViewController
 
@@ -17,22 +17,23 @@
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
+    SKView *skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     
-    // Create and configure the scene.
-    SKScene * scene = [ASTGame sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"levels" ofType:@"plist"];
+    NSArray *levels = [NSArray arrayWithContentsOfFile:plistPath];
     
-    // Present the scene.
+    
+    ASTGameScene *scene = [ASTGameScene sceneWithSize:skView.bounds.size];
+    scene.levelProperties = [levels objectAtIndex:0];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
     [skView presentScene:scene];
 }
 
 - (BOOL)shouldAutorotate
 {
-    return YES;
+    return NO;
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -47,7 +48,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 @end

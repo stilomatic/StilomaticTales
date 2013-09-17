@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<dict/>
+	<dict>
+		<key>projectileImpulse</key>
+		<integer>700</integer>
+		<key>missileFrequency</key>
+		<integer>50</integer>
+		<key>worldGravity</key>
+		<integer>-1</integer>
+		<key>worldSpeed</key>
+		<integer>6</integer>
+		<key>shields</key>
+		<integer>0</integer>
+		<key>villan</key>
+		<string>villan_0.png</string>
+	</dict>
 </array>
 </plist>

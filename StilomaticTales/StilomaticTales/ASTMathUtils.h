@@ -10,7 +10,7 @@
 
 #define ARC4RANDOM_MAX      0x100000000
 
-static const uint32_t bubbleCategory     =  0x1 << 0;
+static const uint32_t shieldCategory     =  0x1 << 0;
 static const uint32_t projectileCategory =  0x1 << 1;
 static const uint32_t missileCategory    =  0x1 << 2;
 static const uint32_t villanCategory     =  0x1 << 3;
