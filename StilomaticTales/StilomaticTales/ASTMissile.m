@@ -31,13 +31,4 @@
     
 }
 
--(void)update
-{
-
-    if (self.position.y < 0.0) {
-        [self removeFromParent];
-    }
-
-}
-
 @end

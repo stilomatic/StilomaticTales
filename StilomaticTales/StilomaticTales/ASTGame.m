@@ -130,21 +130,7 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    ASTBubble *tmpProjectile = [[ASTBubble alloc] initWithImageNamed:@"bubble.png" isDynamic:NO];
-    tmpProjectile.position = CGPointMake(160.0, 80.0);
-    tmpProjectile.physicsBody.dynamic = YES;
-    tmpProjectile.physicsBody.categoryBitMask = projectileCategory;
-    tmpProjectile.physicsBody.contactTestBitMask = villanCategory | bubbleCategory | wallCategory;
-    tmpProjectile.physicsBody.collisionBitMask = villanCategory | bubbleCategory | wallCategory;
-    tmpProjectile.physicsBody.usesPreciseCollisionDetection = YES;
-    CGFloat missileLaunchImpulse = 700.0;
-    CGFloat angle = (M_PI/2) - canon.zRotation;
-    tmpProjectile.physicsBody.velocity = CGVectorMake(missileLaunchImpulse*cosf(angle),
-                                                      missileLaunchImpulse*sinf(angle));
-    [tmpProjectile.physicsBody applyImpulse: CGVectorMake(missileLaunchImpulse*cosf(angle),
-                                                   missileLaunchImpulse*sinf(angle))];
-    [self addChild:tmpProjectile];
-    [projectiles addObject:tmpProjectile];
+    [self launchProjectile];
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -153,7 +139,6 @@
         CGPoint location = [touch locationInNode:self];
         canon.zRotation = -atan2(canon.position.x-location.x, canon.position.y-location.y);
     }
-
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -186,6 +171,25 @@
 {
     ASTMissile *tmpMissile = [[ASTMissile alloc] initWithImageNamed:@"missile.png" andPosition:villan.position];
     [self addChild:tmpMissile];
+}
+
+-(void)launchProjectile
+{
+    ASTBubble *tmpProjectile = [[ASTBubble alloc] initWithImageNamed:@"bubble.png" isDynamic:NO];
+    tmpProjectile.position = CGPointMake(160.0, 80.0);
+    tmpProjectile.physicsBody.dynamic = YES;
+    tmpProjectile.physicsBody.categoryBitMask = projectileCategory;
+    tmpProjectile.physicsBody.contactTestBitMask = villanCategory | bubbleCategory | wallCategory;
+    tmpProjectile.physicsBody.collisionBitMask = villanCategory | bubbleCategory | wallCategory;
+    tmpProjectile.physicsBody.usesPreciseCollisionDetection = YES;
+    CGFloat missileLaunchImpulse = 700.0;
+    CGFloat angle = (M_PI/2) - canon.zRotation;
+    tmpProjectile.physicsBody.velocity = CGVectorMake(missileLaunchImpulse*cosf(angle),
+                                                      missileLaunchImpulse*sinf(angle));
+    [tmpProjectile.physicsBody applyImpulse: CGVectorMake(missileLaunchImpulse*cosf(angle),
+                                                          missileLaunchImpulse*sinf(angle))];
+    [self addChild:tmpProjectile];
+    [projectiles addObject:tmpProjectile];
 }
 
 

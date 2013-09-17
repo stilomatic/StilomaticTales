@@ -21,7 +21,7 @@
 @property (nonatomic,strong) ASTVillan *villan;
 @property (nonatomic,strong) ASTDisplayNode *display;
 
-
+-(void)launchProjectile;
 -(void)launchMissile;
 -(void)hit:(SKNode*)node;
 
