@@ -8,14 +8,17 @@
 
 #import "ASTMissile.h"
 #import "ASTMathUtils.h"
+#import "SKEmitterNode+SKEmitterNode_Utils.h"
 
 @implementation ASTMissile
+@synthesize emitter;
+
 
 -(id)initWithImageNamed:(NSString *)name andPosition:(CGPoint)position
 {
     self = [super initWithImageNamed:name];
     if (self) {
-        self.position = position;
+        self.position = CGPointMake(position.x, position.y-30);
         self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
         self.physicsBody.categoryBitMask = missileCategory;
         self.physicsBody.collisionBitMask = projectileCategory | wallCategory;

@@ -10,6 +10,7 @@
 #import "ASTShield.h"
 #import "ASTGameManager.h"
 #import "ASTMissile.h"
+#import "SKEmitterNode+SKEmitterNode_Utils.h"
 
 @implementation ASTGameScene
 @synthesize projectiles,canon,villan,display,bottom,levelProperties;
@@ -27,21 +28,16 @@
         projectiles = [NSMutableArray array];
         
         self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        
+        SKSpriteNode *bck = [[SKSpriteNode alloc] initWithImageNamed:@"bck-iphone2.png"];
+        bck.anchorPoint = CGPointMake(0.0, 0.0);
+        [self addChild:bck];
+        
         CGFloat gravity = [[levelProperties objectForKey:@"worldGravity"] floatValue] * -0.5;
-        self.physicsWorld.gravity = CGPointMake(0.0, gravity);
+        self.physicsWorld.gravity = CGVectorMake(0.0, gravity);
         self.physicsWorld.speed = [[levelProperties objectForKey:@"worldSpeed"] floatValue];
         self.physicsWorld.contactDelegate = self;
 
-        
-        bottom = [[SKSpriteNode alloc] initWithImageNamed:@"wall.png"];
-        bottom.position = CGPointMake(160.0, 10.0);
-        bottom.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-160.0, -30.0, 320.0, 44.0)];
-        bottom.physicsBody.categoryBitMask = wallCategory;
-        bottom.physicsBody.collisionBitMask =  missileCategory;
-        bottom.physicsBody.contactTestBitMask = missileCategory;
-        bottom.physicsBody.restitution = 0.5;
-        bottom.physicsBody.dynamic = NO;
-        [self addChild:bottom];
         
     
         int row = 0;
@@ -52,7 +48,7 @@
             int random = (int)[ASTMathUtils getRandom:6];
             if (random == 0) {
                 ASTShield *shield = [[ASTShield alloc] initWithImageNamed:@"bubble.png"];
-                shield.position = CGPointMake(30+(30*row), -(30*column)+430);
+                shield.position = CGPointMake(30+(30*row), -(30*column)+460);
                 [self addChild:shield];
             }
             
@@ -73,6 +69,17 @@
         canon.zRotation = M_PI;
         canon.anchorPoint = CGPointMake(0.5, 1.0);
         [self addChild:canon];
+        
+        bottom = [[SKSpriteNode alloc] initWithImageNamed:@"ground.png"];
+        bottom.position = CGPointMake(160.0, 30.0);
+        bottom.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:CGRectMake(-160.0, -30.0, 320.0, 44.0)];
+        bottom.physicsBody.categoryBitMask = wallCategory;
+        bottom.physicsBody.collisionBitMask =  missileCategory;
+        bottom.physicsBody.contactTestBitMask = missileCategory;
+        bottom.physicsBody.restitution = 0.5;
+        bottom.physicsBody.dynamic = NO;
+        bottom.blendMode = SKBlendModeMultiply;
+        [self addChild:bottom];
         
         display = [[ASTDisplayNode alloc] init];
         display.position = CGPointMake(0, 440);
@@ -108,18 +115,42 @@
     {
         [gm playerScore:20];
         [gm villanHited];
+        if(gm.villanEnergy <= 0){
+            [self explode:secondBody.node];
+        }
     }
     
     if ((firstBody.categoryBitMask & projectileCategory) != 0)
     {
         [self hit:firstBody.node];
+        
+        if((secondBody.categoryBitMask & missileCategory) != 0){
+            [self hit:secondBody.node];
+            [self explode:secondBody.node];
+        }
     }
     
     if ((firstBody.categoryBitMask & missileCategory) != 0)
     {
         [self hit:firstBody.node];
-        [gm playerHited];
+        
+        if((secondBody.categoryBitMask & wallCategory) != 0){
+            [gm playerHited];
+            [self explode:firstBody.node];
+        }
     }
+}
+
+
+-(void)explode:(SKNode*)node
+{
+    SKEmitterNode *emitter = [SKEmitterNode ast_emitterNodeWithEmitterNamed:@"BokeParticles"];
+    emitter.position = node.position;
+    [emitter runAction:[SKAction fadeOutWithDuration:1.0] completion:^{
+        [emitter removeFromParent];
+    }];
+    [self addChild:emitter];
+
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -181,7 +212,7 @@
 {
     SKSpriteNode *tmpProjectile = [[SKSpriteNode alloc] initWithImageNamed:@"bubble.png"];
     tmpProjectile.position = CGPointMake(160.0, 80.0);
-    tmpProjectile.xScale = tmpProjectile.yScale = 0.5;
+    tmpProjectile.xScale = tmpProjectile.yScale = 0.3;
     tmpProjectile.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:tmpProjectile.size.width*0.5];
     tmpProjectile.physicsBody.dynamic = YES;
     tmpProjectile.physicsBody.categoryBitMask = projectileCategory;

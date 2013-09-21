@@ -37,7 +37,7 @@
     if ([ASTMathUtils getRandom:10] == 0 && !self.hasActions) {
         [self runAction:[SKAction moveToX:[ASTMathUtils getRandom:320] duration:1.5]];
         [self runAction:[SKAction moveToY:140+[ASTMathUtils getRandom:320] duration:1.5]];
-        [self runAction:[SKAction scaleTo:0.3+[ASTMathUtils getRandom:1.5] duration:1.5]];
+        [self runAction:[SKAction scaleTo:0.3+[ASTMathUtils getRandom:0.7 ] duration:1.5]];
     }
 }
 

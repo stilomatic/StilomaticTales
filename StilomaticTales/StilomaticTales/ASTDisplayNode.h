@@ -8,6 +8,8 @@
 
 #import <SpriteKit/SpriteKit.h>
 
+static NSString *font = @"HoeflerText-BlackItalic";
+
 @interface ASTDisplayNode : SKNode
 {
     SKLabelNode *lifesLabel;

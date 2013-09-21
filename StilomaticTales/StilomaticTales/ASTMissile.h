@@ -10,6 +10,8 @@
 
 @interface ASTMissile : SKSpriteNode
 
+@property (nonatomic,strong)SKEmitterNode *emitter;
+
 -(id)initWithImageNamed:(NSString *)name andPosition:(CGPoint)position;
 
 @end
