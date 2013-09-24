@@ -9,11 +9,12 @@
 #import "ASTGameManager.h"
 
 @implementation ASTGameManager
-@synthesize level,score,lifes,playerEnergy,villanEnergy;
+@synthesize level,score,lifes,playerEnergy,villanEnergy,currentViewController;
 
 -(void)gameOver
 {
 
+    [currentViewController.navigationController popToRootViewControllerAnimated:YES];
 
 }
 
@@ -32,12 +33,14 @@
     self.level++;
     [self setValue:[NSNumber numberWithInt:self.lifes] forKey:@"lifes"];
     [self setValue:[NSNumber numberWithInt:self.level] forKey:@"level"];
+    
+    [currentViewController.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)newPlayer{
     
-    self.playerEnergy = 20;
-    [self setValue:[NSNumber numberWithInt:self.playerEnergy] forKey:@"playerEnergy"];
+    self.playerEnergy = [NSNumber numberWithInt:20];
+    [self setValue:self.playerEnergy forKey:@"playerEnergy"];
 
 }
 
@@ -54,8 +57,10 @@
 
 -(void)playerScore:(NSInteger)value
 {
-    self.score += value;
-    [self setValue:[NSNumber numberWithInt:self.score] forKey:@"score"];
+    int current = [self.score integerValue];
+    current += value;
+    score = [NSNumber numberWithInt:current];
+    [self setValue:self.score forKey:@"score"];
 }
 
 -(void)newLevel
@@ -77,11 +82,14 @@
 
 -(void)playerHited
 {
-    self.playerEnergy--;
-    if (self.playerEnergy <= 0) {
+    int current = [self.playerEnergy integerValue];
+    current--;
+    if (current <= 0) {
         [self matchOver];
     }
-    [self setValue:[NSNumber numberWithInt:self.playerEnergy] forKey:@"playerEnergy"];
+    self.playerEnergy = [NSNumber numberWithInt:current];
+    [self setValue:self.playerEnergy forKey:@"playerEnergy"];
+    
 }
 
 + (ASTGameManager *)sharedInstance
@@ -93,6 +101,7 @@
         sharedInstance.level = 1;
         sharedInstance.score = 0;
         sharedInstance.lifes = 3;
+        [sharedInstance newLevel];
     });
     return sharedInstance;
 }

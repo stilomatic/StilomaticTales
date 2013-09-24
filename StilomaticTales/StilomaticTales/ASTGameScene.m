@@ -22,8 +22,6 @@
     if (self = [super initWithSize:size]) {
         
         levelProperties = level;
-        ASTGameManager *gm = [ASTGameManager sharedInstance];
-        [gm newLevel];
         
         projectiles = [NSMutableArray array];
         

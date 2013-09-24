@@ -17,23 +17,26 @@
     self = [super init];
     if(self){
         
+        self.alpha = 0.6;
         ASTGameManager *gm = [ASTGameManager sharedInstance];
         
         score = gm.score;
         energy = gm.playerEnergy;
         valueEnergy = gm.playerEnergy;
         valueScore = gm.score;
-        
+    
         [gm addObserver:self forKeyPath:@"playerEnergy" options:NSKeyValueObservingOptionNew context:nil];
         [gm addObserver:self forKeyPath:@"lifes" options:NSKeyValueObservingOptionNew context:nil];
         [gm addObserver:self forKeyPath:@"level" options:NSKeyValueObservingOptionNew context:nil];
         [gm addObserver:self forKeyPath:@"score" options:NSKeyValueObservingOptionNew context:nil];
+
+        
         
         SKSpriteNode *bck = [SKSpriteNode spriteNodeWithImageNamed:@"display.png"];
-        bck.position = CGPointMake(160, 20);
+        bck.position = CGPointMake(160, 0);
         bck.blendMode = SKBlendModeAdd;
-        bck.yScale = 0.8;
-        bck.xScale = 1.6;
+        //bck.yScale = 0.8;
+        //bck.xScale = 1.6;
         [self addChild:bck];
         
         lifesLabel = [SKLabelNode labelNodeWithFontNamed:font];

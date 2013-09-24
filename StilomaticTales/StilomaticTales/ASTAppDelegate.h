@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASTGameManager.h"
 
 @interface ASTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong,nonatomic) ASTGameManager *gm;
 
 @end

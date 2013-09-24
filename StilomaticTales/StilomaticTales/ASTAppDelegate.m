@@ -9,10 +9,13 @@
 #import "ASTAppDelegate.h"
 
 @implementation ASTAppDelegate
+@synthesize gm;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    gm = [ASTGameManager sharedInstance];
+    
     return YES;
 }
 							

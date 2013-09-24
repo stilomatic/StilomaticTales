@@ -7,27 +7,36 @@
 //
 
 #import "ASTViewController.h"
+#import "ASTGameManager.h"
 #import "ASTGameScene.h"
+#import "ASTHomeScene.h"
 
 @implementation ASTViewController
 
-- (void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animate
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animate];
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
-
     SKView *skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
+    
+    ASTGameManager *gm = [ASTGameManager sharedInstance];
+    [gm setCurrentViewController:self];
     
     NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"levels" ofType:@"plist"];
     NSArray *levels = [NSArray arrayWithContentsOfFile:plistPath];
     
     
-    ASTGameScene *scene = [[ASTGameScene alloc] initWithSize:skView.bounds.size andProperties:[levels objectAtIndex:0]];
+    ASTGameScene *scene = [[ASTGameScene alloc] initWithSize:skView.bounds.size andProperties:[levels objectAtIndex:gm.level]];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     [skView presentScene:scene];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
 }
 
 - (BOOL)shouldAutorotate
