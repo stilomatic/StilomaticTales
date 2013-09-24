@@ -44,7 +44,7 @@
 		606E762B17EDF52F0015388B /* villan_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 606E762717EDF52F0015388B /* villan_3.png */; };
 		606E762C17EDF52F0015388B /* villan_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 606E762817EDF52F0015388B /* villan_2.png */; };
 		606E762D17EDF52F0015388B /* villan_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 606E762917EDF52F0015388B /* villan_1.png */; };
-		60796DCE17F0BD7200F5F936 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796DCD17F0BD7200F5F936 /* GameKit.framework */; };
+		60796DCE17F0BD7200F5F936 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796DCD17F0BD7200F5F936 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		60796DD117F2083300F5F936 /* ASTGamekitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60796DD017F2083300F5F936 /* ASTGamekitManager.m */; };
 		60A0796E17E82C8F003FB1A1 /* levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60A0796D17E82C8F003FB1A1 /* levels.plist */; };
 		60D90E2617EF6974009C07D5 /* ASTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D90E2517EF6974009C07D5 /* ASTHomeViewController.m */; };

@@ -20,47 +20,45 @@
 
 -(void)matchOver
 {
-    self.lifes--;
-    if (self.lifes <= 0) {
+    lifes--;
+    if (lifes <= 0) {
         [self gameOver];
     }
-    [self setValue:[NSNumber numberWithInt:self.lifes] forKey:@"lifes"];
+    [self setValue:[NSNumber numberWithInteger:lifes] forKey:@"lifes"];
 
 }
 -(void)matchWin
 {
-    self.lifes++;
-    self.level++;
-    [self setValue:[NSNumber numberWithInt:self.lifes] forKey:@"lifes"];
-    [self setValue:[NSNumber numberWithInt:self.level] forKey:@"level"];
+    lifes++;
+    level++;
+    [self setValue:[NSNumber numberWithInteger:lifes] forKey:@"lifes"];
+    [self setValue:[NSNumber numberWithInteger:level] forKey:@"level"];
     
     [currentViewController.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)newPlayer{
     
-    self.playerEnergy = [NSNumber numberWithInt:20];
-    [self setValue:self.playerEnergy forKey:@"playerEnergy"];
+    playerEnergy = 20;
+    [self setValue:[NSNumber numberWithInteger:playerEnergy] forKey:@"playerEnergy"];
 
 }
 
 -(void)newVillan
 {
 
-    self.villanEnergy = self.level * 20;
-    [self setValue:[NSNumber numberWithInt:self.villanEnergy] forKey:@"villanEnergy"];
+    villanEnergy = level * 20;
+    [self setValue:[NSNumber numberWithInteger:villanEnergy] forKey:@"villanEnergy"];
 
 
 }
 
 #pragma mark PUBLIC METHODS
 
--(void)playerScore:(NSInteger)value
+-(void)playerScore:(NSInteger)_value
 {
-    int current = [self.score integerValue];
-    current += value;
-    score = [NSNumber numberWithInt:current];
-    [self setValue:self.score forKey:@"score"];
+    score += _value;
+    [self setValue:[NSNumber numberWithInteger:score] forKey:@"score"];
 }
 
 -(void)newLevel
@@ -73,22 +71,20 @@
 
 -(void)villanHited
 {
-    self.villanEnergy--;
-    if (self.villanEnergy <= 0) {
+    villanEnergy--;
+    if (villanEnergy <= 0) {
         [self matchWin];
     }
-    [self setValue:[NSNumber numberWithInt:self.villanEnergy] forKey:@"villanEnergy"];
+    [self setValue:[NSNumber numberWithInteger:villanEnergy] forKey:@"villanEnergy"];
 }
 
 -(void)playerHited
 {
-    int current = [self.playerEnergy integerValue];
-    current--;
-    if (current <= 0) {
+    playerEnergy--;
+    if (playerEnergy <= 0) {
         [self matchOver];
     }
-    self.playerEnergy = [NSNumber numberWithInt:current];
-    [self setValue:self.playerEnergy forKey:@"playerEnergy"];
+    [self setValue:[NSNumber numberWithInteger:playerEnergy] forKey:@"playerEnergy"];
     
 }
 

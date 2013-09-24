@@ -14,16 +14,16 @@
 
 }
 @property (nonatomic) NSInteger level;
-@property (nonatomic,strong) NSNumber *score;
+@property (nonatomic) NSInteger score;
 @property (nonatomic) NSInteger lifes;
-@property (nonatomic,strong) NSNumber *playerEnergy;
+@property (nonatomic) NSInteger playerEnergy;
 @property (nonatomic) NSInteger villanEnergy;
 @property (nonatomic,strong) UIViewController *currentViewController;
 
 -(void)newLevel;
 -(void)villanHited;
 -(void)playerHited;
--(void)playerScore:(NSInteger)value;
+-(void)playerScore:(NSInteger)_value;
 + (ASTGameManager *)sharedInstance;
 
 @end

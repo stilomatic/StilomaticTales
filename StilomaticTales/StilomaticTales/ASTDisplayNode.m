@@ -72,6 +72,15 @@
     return self;
 }
 
+-(void)dealloc
+{
+    ASTGameManager *gm = [ASTGameManager sharedInstance];
+    [gm removeObserver:self forKeyPath:@"playerEnergy"];
+    [gm removeObserver:self forKeyPath:@"lifes"];
+    [gm removeObserver:self forKeyPath:@"level"];
+    [gm removeObserver:self forKeyPath:@"score"];
+}
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     

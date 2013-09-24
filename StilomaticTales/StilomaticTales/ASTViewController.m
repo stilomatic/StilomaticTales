@@ -22,6 +22,7 @@
     skView.showsNodeCount = YES;
     
     ASTGameManager *gm = [ASTGameManager sharedInstance];
+    [gm newLevel];
     [gm setCurrentViewController:self];
     
     NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"levels" ofType:@"plist"];

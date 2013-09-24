@@ -34,7 +34,7 @@
 {
     if (![self isGameCenterAvailable]) return;
     
-    __block GKLocalPlayer *player = [GKLocalPlayer localPlayer];
+    GKLocalPlayer *player = [GKLocalPlayer localPlayer];
     NSLog(@"** GAMEKIT_AUTH : %d",player.authenticated);
     if (player.authenticated == NO) {
         player.authenticateHandler = ^(UIViewController *viewController, NSError *error)
