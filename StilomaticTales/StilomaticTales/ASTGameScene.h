@@ -11,8 +11,9 @@
 #import "ASTVillan.h"
 #import "ASTDisplayNode.h"
 #import "ASTMathUtils.h"
+#import "ASTSceneChangeDelegate.h"
 
-@interface ASTGameScene : SKScene <SKPhysicsContactDelegate>
+@interface ASTGameScene : SKScene <SKPhysicsContactDelegate,ASTSceneChangeDelegate>
 
 
 @property (nonatomic,strong) NSDictionary *levelProperties;

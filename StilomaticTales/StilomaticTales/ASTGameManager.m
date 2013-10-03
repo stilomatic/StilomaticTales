@@ -9,18 +9,19 @@
 #import "ASTGameManager.h"
 
 @implementation ASTGameManager
-@synthesize level,score,lifes,playerEnergy,villanEnergy,currentViewController;
+@synthesize level,score,lifes,playerEnergy,villanEnergy,delegate;
 
 -(void)gameOver
 {
 
-    [currentViewController.navigationController popToRootViewControllerAnimated:YES];
+    [delegate sceneChange:nil andIndex:-1];
 
 }
 
 -(void)matchOver
 {
     lifes--;
+    [self newPlayer];
     if (lifes <= 0) {
         [self gameOver];
     }
@@ -31,10 +32,9 @@
 {
     lifes++;
     level++;
+    [delegate sceneChange:nil andIndex:0];
     [self setValue:[NSNumber numberWithInteger:lifes] forKey:@"lifes"];
     [self setValue:[NSNumber numberWithInteger:level] forKey:@"level"];
-    
-    [currentViewController.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)newPlayer{
@@ -63,7 +63,7 @@
 
 -(void)newLevel
 {
-    
+    lifes = 3;
     [self newPlayer];
     [self newVillan];
     
@@ -96,7 +96,6 @@
         sharedInstance = [[ASTGameManager alloc] init];
         sharedInstance.level = 1;
         sharedInstance.score = 0;
-        sharedInstance.lifes = 3;
         [sharedInstance newLevel];
     });
     return sharedInstance;

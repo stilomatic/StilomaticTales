@@ -11,6 +11,8 @@
 #import "ASTGameManager.h"
 #import "ASTMissile.h"
 #import "SKEmitterNode+SKEmitterNode_Utils.h"
+#import <Foundation/Foundation.h>
+#import "ASTScoreScene.h"
 
 @implementation ASTGameScene
 @synthesize projectiles,canon,villan,display,bottom,levelProperties;
@@ -20,6 +22,10 @@
 {
 
     if (self = [super initWithSize:size]) {
+        
+        ASTGameManager *gm = [ASTGameManager sharedInstance];
+        [gm newLevel];
+        [gm setDelegate:self];
         
         levelProperties = level;
         
@@ -85,6 +91,15 @@
         
     }
     return self;
+}
+
+-(void)sceneChange:(SKScene *)scene andIndex:(NSInteger)index
+{
+    SKTransition *reveal = [SKTransition doorsCloseHorizontalWithDuration:1.0];
+    ASTScoreScene *newScene = [[ASTScoreScene alloc] initWithSize:self.frame.size];
+    newScene.scaleMode = SKSceneScaleModeAspectFill;
+    [self.scene.view presentScene:newScene transition: reveal];
+    
 }
 
 - (void)didBeginContact:(SKPhysicsContact *)contact
@@ -216,7 +231,6 @@
     tmpProjectile.physicsBody.categoryBitMask = projectileCategory;
     tmpProjectile.physicsBody.contactTestBitMask = villanCategory | shieldCategory | wallCategory;
     tmpProjectile.physicsBody.collisionBitMask = villanCategory | shieldCategory | wallCategory;
-    //tmpProjectile.physicsBody.usesPreciseCollisionDetection = YES;
     CGFloat missileLaunchImpulse = [[levelProperties objectForKey:@"projectileImpulse"] floatValue];
     CGFloat angle = (M_PI/2) - canon.zRotation;
     CGVector vector = CGVectorMake(missileLaunchImpulse*cosf(angle), missileLaunchImpulse*sinf(angle));

@@ -47,7 +47,13 @@
 		60796DCE17F0BD7200F5F936 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796DCD17F0BD7200F5F936 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		60796DD117F2083300F5F936 /* ASTGamekitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60796DD017F2083300F5F936 /* ASTGamekitManager.m */; };
 		60A0796E17E82C8F003FB1A1 /* levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60A0796D17E82C8F003FB1A1 /* levels.plist */; };
-		60D90E2617EF6974009C07D5 /* ASTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D90E2517EF6974009C07D5 /* ASTHomeViewController.m */; };
+		60C6653B17FD584600E3E3C8 /* ASTHomeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6653A17FD584600E3E3C8 /* ASTHomeScene.m */; };
+		60C6653E17FD5A2800E3E3C8 /* ASTLevelPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6653D17FD5A2800E3E3C8 /* ASTLevelPicker.m */; };
+		60C6654217FD7BE200E3E3C8 /* ASTScoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6654117FD7BE200E3E3C8 /* ASTScoreScene.m */; };
+		60C6654517FD81A300E3E3C8 /* ASTButtonSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6654417FD81A300E3E3C8 /* ASTButtonSprite.m */; };
+		60C6654717FDA30400E3E3C8 /* bckHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654617FDA30400E3E3C8 /* bckHome.png */; };
+		60C6654917FDA74500E3E3C8 /* title-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654817FDA74500E3E3C8 /* title-iphone.png */; };
+		60C6654B17FDA93200E3E3C8 /* homedetail-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654A17FDA93200E3E3C8 /* homedetail-iphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,8 +121,18 @@
 		60796DCF17F2083300F5F936 /* ASTGamekitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGamekitManager.h; sourceTree = "<group>"; };
 		60796DD017F2083300F5F936 /* ASTGamekitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTGamekitManager.m; sourceTree = "<group>"; };
 		60A0796D17E82C8F003FB1A1 /* levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = levels.plist; sourceTree = "<group>"; };
-		60D90E2417EF6974009C07D5 /* ASTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTHomeViewController.h; sourceTree = "<group>"; };
-		60D90E2517EF6974009C07D5 /* ASTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTHomeViewController.m; sourceTree = "<group>"; };
+		60C6653917FD584600E3E3C8 /* ASTHomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTHomeScene.h; sourceTree = "<group>"; };
+		60C6653A17FD584600E3E3C8 /* ASTHomeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTHomeScene.m; sourceTree = "<group>"; };
+		60C6653C17FD5A2800E3E3C8 /* ASTLevelPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTLevelPicker.h; sourceTree = "<group>"; };
+		60C6653D17FD5A2800E3E3C8 /* ASTLevelPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTLevelPicker.m; sourceTree = "<group>"; };
+		60C6653F17FD5BE200E3E3C8 /* ASTSceneChangeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASTSceneChangeDelegate.h; sourceTree = "<group>"; };
+		60C6654017FD7BE200E3E3C8 /* ASTScoreScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTScoreScene.h; sourceTree = "<group>"; };
+		60C6654117FD7BE200E3E3C8 /* ASTScoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTScoreScene.m; sourceTree = "<group>"; };
+		60C6654317FD81A300E3E3C8 /* ASTButtonSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTButtonSprite.h; sourceTree = "<group>"; };
+		60C6654417FD81A300E3E3C8 /* ASTButtonSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTButtonSprite.m; sourceTree = "<group>"; };
+		60C6654617FDA30400E3E3C8 /* bckHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bckHome.png; path = Base.lproj/Assets/bckHome.png; sourceTree = "<group>"; };
+		60C6654817FDA74500E3E3C8 /* title-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "title-iphone.png"; path = "Base.lproj/Assets/title-iphone.png"; sourceTree = "<group>"; };
+		60C6654A17FDA93200E3E3C8 /* homedetail-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "homedetail-iphone.png"; path = "Base.lproj/Assets/homedetail-iphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,20 +196,15 @@
 		35781D6B17E1ECE000FBD5FC /* StilomaticTales */ = {
 			isa = PBXGroup;
 			children = (
+				60C6653F17FD5BE200E3E3C8 /* ASTSceneChangeDelegate.h */,
+				60C6653717FD57EB00E3E3C8 /* Nodes */,
 				606E762317EDC57D0015388B /* Categories */,
 				60A0796D17E82C8F003FB1A1 /* levels.plist */,
-				359662F217E3126E00E29384 /* Score display */,
-				35781DB717E1EDAB00FBD5FC /* Sprites */,
 				35781DB617E1ED8900FBD5FC /* Utils */,
-				35781DB517E1ED7C00FBD5FC /* Assets */,
 				60796DCF17F2083300F5F936 /* ASTGamekitManager.h */,
 				60796DD017F2083300F5F936 /* ASTGamekitManager.m */,
 				35781DA717E1ED5E00FBD5FC /* ASTGameManager.h */,
 				35781DA617E1ED5E00FBD5FC /* ASTGameManager.m */,
-				35781DA917E1ED5E00FBD5FC /* ASTGameScene.h */,
-				35781DA817E1ED5E00FBD5FC /* ASTGameScene.m */,
-				60D90E2417EF6974009C07D5 /* ASTHomeViewController.h */,
-				60D90E2517EF6974009C07D5 /* ASTHomeViewController.m */,
 				35781D7417E1ECE000FBD5FC /* ASTAppDelegate.h */,
 				35781D7517E1ECE000FBD5FC /* ASTAppDelegate.m */,
 				35781D7717E1ECE000FBD5FC /* Main_iPhone.storyboard */,
@@ -201,6 +212,7 @@
 				35781D7D17E1ECE000FBD5FC /* ASTViewController.h */,
 				35781D7E17E1ECE000FBD5FC /* ASTViewController.m */,
 				35781D8517E1ECE000FBD5FC /* Images.xcassets */,
+				35781DB517E1ED7C00FBD5FC /* Assets */,
 				35781D6C17E1ECE000FBD5FC /* Supporting Files */,
 			);
 			path = StilomaticTales;
@@ -238,6 +250,9 @@
 		35781DB517E1ED7C00FBD5FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				60C6654A17FDA93200E3E3C8 /* homedetail-iphone.png */,
+				60C6654817FDA74500E3E3C8 /* title-iphone.png */,
+				60C6654617FDA30400E3E3C8 /* bckHome.png */,
 				606E762617EDF52F0015388B /* villan_4.png */,
 				606E762717EDF52F0015388B /* villan_3.png */,
 				606E762817EDF52F0015388B /* villan_2.png */,
@@ -267,13 +282,16 @@
 		35781DB717E1EDAB00FBD5FC /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				60351E1617E5B33F00AF382B /* Villans */,
 				35781DAB17E1ED5E00FBD5FC /* ASTVillan.h */,
 				35781DAA17E1ED5E00FBD5FC /* ASTVillan.m */,
 				35781DAD17E1ED5E00FBD5FC /* ASTShield.h */,
 				35781DAC17E1ED5E00FBD5FC /* ASTShield.m */,
 				351C2A9B17E73F4B00C92620 /* ASTMissile.h */,
 				351C2A9C17E73F4B00C92620 /* ASTMissile.m */,
+				60C6653C17FD5A2800E3E3C8 /* ASTLevelPicker.h */,
+				60C6653D17FD5A2800E3E3C8 /* ASTLevelPicker.m */,
+				60C6654317FD81A300E3E3C8 /* ASTButtonSprite.h */,
+				60C6654417FD81A300E3E3C8 /* ASTButtonSprite.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -285,13 +303,6 @@
 				359662FA17E3219600E29384 /* ASTDisplayNode.m */,
 			);
 			name = "Score display";
-			sourceTree = "<group>";
-		};
-		60351E1617E5B33F00AF382B /* Villans */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Villans;
 			sourceTree = "<group>";
 		};
 		606E761317EDC1D50015388B /* Particle */ = {
@@ -309,6 +320,29 @@
 				606E762117EDC5780015388B /* SKEmitterNode+SKEmitterNode_Utils.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		60C6653717FD57EB00E3E3C8 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				60C6653817FD580200E3E3C8 /* Scenes */,
+				35781DB717E1EDAB00FBD5FC /* Sprites */,
+				359662F217E3126E00E29384 /* Score display */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		60C6653817FD580200E3E3C8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				35781DA917E1ED5E00FBD5FC /* ASTGameScene.h */,
+				35781DA817E1ED5E00FBD5FC /* ASTGameScene.m */,
+				60C6653917FD584600E3E3C8 /* ASTHomeScene.h */,
+				60C6653A17FD584600E3E3C8 /* ASTHomeScene.m */,
+				60C6654017FD7BE200E3E3C8 /* ASTScoreScene.h */,
+				60C6654117FD7BE200E3E3C8 /* ASTScoreScene.m */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,10 +430,12 @@
 				60A0796E17E82C8F003FB1A1 /* levels.plist in Resources */,
 				35781D7C17E1ECE000FBD5FC /* Main_iPad.storyboard in Resources */,
 				60351E2617E635D500AF382B /* cannon.png in Resources */,
+				60C6654917FDA74500E3E3C8 /* title-iphone.png in Resources */,
 				606E762D17EDF52F0015388B /* villan_1.png in Resources */,
 				606E762C17EDF52F0015388B /* villan_2.png in Resources */,
 				3550908817E6F48200FC6BA7 /* missile.png in Resources */,
 				35781D7917E1ECE000FBD5FC /* Main_iPhone.storyboard in Resources */,
+				60C6654717FDA30400E3E3C8 /* bckHome.png in Resources */,
 				606E762B17EDF52F0015388B /* villan_3.png in Resources */,
 				35781D7017E1ECE000FBD5FC /* InfoPlist.strings in Resources */,
 				606E762A17EDF52F0015388B /* villan_4.png in Resources */,
@@ -409,6 +445,7 @@
 				606E761F17EDC5610015388B /* BokeParticles.sks in Resources */,
 				60351E2117E6359F00AF382B /* bubble.png in Resources */,
 				606E762517EDCCBC0015388B /* circleParticle.png in Resources */,
+				60C6654B17FDA93200E3E3C8 /* homedetail-iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,16 +465,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				35781DB117E1ED5E00FBD5FC /* ASTGameManager.m in Sources */,
+				60C6653E17FD5A2800E3E3C8 /* ASTLevelPicker.m in Sources */,
+				60C6654217FD7BE200E3E3C8 /* ASTScoreScene.m in Sources */,
 				35781D7217E1ECE000FBD5FC /* main.m in Sources */,
 				60796DD117F2083300F5F936 /* ASTGamekitManager.m in Sources */,
 				35781D7F17E1ECE000FBD5FC /* ASTViewController.m in Sources */,
 				606E762217EDC5780015388B /* SKEmitterNode+SKEmitterNode_Utils.m in Sources */,
+				60C6654517FD81A300E3E3C8 /* ASTButtonSprite.m in Sources */,
 				351C2A9D17E73F4B00C92620 /* ASTMissile.m in Sources */,
 				35781DB017E1ED5E00FBD5FC /* ASTMathUtils.m in Sources */,
+				60C6653B17FD584600E3E3C8 /* ASTHomeScene.m in Sources */,
 				35781DB317E1ED5E00FBD5FC /* ASTVillan.m in Sources */,
 				35781D7617E1ECE000FBD5FC /* ASTAppDelegate.m in Sources */,
 				35781DB417E1ED5E00FBD5FC /* ASTShield.m in Sources */,
-				60D90E2617EF6974009C07D5 /* ASTHomeViewController.m in Sources */,
 				359662FB17E3219600E29384 /* ASTDisplayNode.m in Sources */,
 				35781DB217E1ED5E00FBD5FC /* ASTGameScene.m in Sources */,
 			);

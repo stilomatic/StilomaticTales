@@ -21,15 +21,7 @@
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     
-    ASTGameManager *gm = [ASTGameManager sharedInstance];
-    [gm newLevel];
-    [gm setCurrentViewController:self];
-    
-    NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"levels" ofType:@"plist"];
-    NSArray *levels = [NSArray arrayWithContentsOfFile:plistPath];
-    
-    
-    ASTGameScene *scene = [[ASTGameScene alloc] initWithSize:skView.bounds.size andProperties:[levels objectAtIndex:gm.level]];
+    ASTHomeScene *scene = [[ASTHomeScene alloc] initWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     [skView presentScene:scene];
 }

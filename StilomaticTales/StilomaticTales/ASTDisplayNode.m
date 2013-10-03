@@ -99,12 +99,14 @@
 -(void)update
 {
     
-    if (valueScore < score) {
+    if (valueScore <= score) {
         valueScore++;
     }
     
-    if (valueEnergy > energy) {
+    if (valueEnergy >= energy) {
         valueEnergy--;
+    }else{
+        valueEnergy = energy;
     }
     
     energyLabel.text = [NSString stringWithFormat:@"Energy: %u",valueEnergy];

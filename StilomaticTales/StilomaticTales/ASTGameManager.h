@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ASTSceneChangeDelegate.h"
 
 @interface ASTGameManager : NSObject
 {
@@ -18,7 +19,7 @@
 @property (nonatomic) NSInteger lifes;
 @property (nonatomic) NSInteger playerEnergy;
 @property (nonatomic) NSInteger villanEnergy;
-@property (nonatomic,strong) UIViewController *currentViewController;
+@property (nonatomic,unsafe_unretained) id<ASTSceneChangeDelegate> delegate;
 
 -(void)newLevel;
 -(void)villanHited;
