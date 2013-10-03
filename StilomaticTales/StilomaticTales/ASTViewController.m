@@ -18,8 +18,8 @@
     [super viewWillAppear:animate];
     
     SKView *skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
+    skView.showsFPS = NO;
+    skView.showsNodeCount = NO;
     
     ASTHomeScene *scene = [[ASTHomeScene alloc] initWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;

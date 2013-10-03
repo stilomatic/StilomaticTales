@@ -60,7 +60,7 @@
 
 -(void)sceneChange:(SKScene *)scene andIndex:(NSInteger)index
 {
-    SKTransition *reveal = [SKTransition doorsOpenHorizontalWithDuration:1.0];
+    SKTransition *reveal = [SKTransition fadeWithDuration:1.0];
     ASTGameScene *newScene = [[ASTGameScene alloc] initWithSize:self.frame.size andProperties:[levelPropreties objectAtIndex:index]];
     newScene.scaleMode = SKSceneScaleModeAspectFill;
     reveal.pausesIncomingScene = YES;

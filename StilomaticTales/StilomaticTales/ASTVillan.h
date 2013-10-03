@@ -10,6 +10,9 @@
 
 @interface ASTVillan : SKSpriteNode
 
+@property (nonatomic,assign) BOOL isDead;
+@property (nonatomic,assign) BOOL isLastAnim;
+
 -(void)update;
 
 @end

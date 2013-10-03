@@ -23,11 +23,13 @@
         bck.anchorPoint = CGPointMake(0.0, 0.0);
         [self addChild:bck];
         
-        ASTButtonSprite *button = [[ASTButtonSprite alloc] initWithImageNamed:@"display.png"];
-        button.position = CGPointMake(self.size.width*0.5, self.size.height*0.5);
+        ASTButtonSprite *button = [[ASTButtonSprite alloc] initWithImageNamed:@"playBtn-iphone.png"];
+        button.position = CGPointMake(self.size.width*0.5, 40);
         button.userInteractionEnabled = YES;
         button.delegate = self;
+        button.xScale = button.yScale = 0.2;
         [self addChild:button];
+        [button runAction:[SKAction scaleTo:1.0 duration:1.0]];
     }
     
     return self;

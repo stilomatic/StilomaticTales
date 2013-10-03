@@ -54,6 +54,7 @@
 		60C6654717FDA30400E3E3C8 /* bckHome.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654617FDA30400E3E3C8 /* bckHome.png */; };
 		60C6654917FDA74500E3E3C8 /* title-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654817FDA74500E3E3C8 /* title-iphone.png */; };
 		60C6654B17FDA93200E3E3C8 /* homedetail-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654A17FDA93200E3E3C8 /* homedetail-iphone.png */; };
+		60C6654D17FDB1BC00E3E3C8 /* playBtn-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654C17FDB1BC00E3E3C8 /* playBtn-iphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		60C6654617FDA30400E3E3C8 /* bckHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bckHome.png; path = Base.lproj/Assets/bckHome.png; sourceTree = "<group>"; };
 		60C6654817FDA74500E3E3C8 /* title-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "title-iphone.png"; path = "Base.lproj/Assets/title-iphone.png"; sourceTree = "<group>"; };
 		60C6654A17FDA93200E3E3C8 /* homedetail-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "homedetail-iphone.png"; path = "Base.lproj/Assets/homedetail-iphone.png"; sourceTree = "<group>"; };
+		60C6654C17FDB1BC00E3E3C8 /* playBtn-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "playBtn-iphone.png"; path = "Base.lproj/Assets/playBtn-iphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 		35781DB517E1ED7C00FBD5FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				60C6654C17FDB1BC00E3E3C8 /* playBtn-iphone.png */,
 				60C6654A17FDA93200E3E3C8 /* homedetail-iphone.png */,
 				60C6654817FDA74500E3E3C8 /* title-iphone.png */,
 				60C6654617FDA30400E3E3C8 /* bckHome.png */,
@@ -438,6 +441,7 @@
 				60C6654717FDA30400E3E3C8 /* bckHome.png in Resources */,
 				606E762B17EDF52F0015388B /* villan_3.png in Resources */,
 				35781D7017E1ECE000FBD5FC /* InfoPlist.strings in Resources */,
+				60C6654D17FDB1BC00E3E3C8 /* playBtn-iphone.png in Resources */,
 				606E762A17EDF52F0015388B /* villan_4.png in Resources */,
 				606E761D17EDC4280015388B /* display.png in Resources */,
 				606E761717EDC2D70015388B /* bck-iphone2.png in Resources */,

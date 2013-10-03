@@ -11,11 +11,14 @@
 @implementation ASTGameManager
 @synthesize level,score,lifes,playerEnergy,villanEnergy,delegate;
 
+-(void)changeScene
+{
+    [delegate sceneChange:nil andIndex:-1];
+}
+
 -(void)gameOver
 {
-
     [delegate sceneChange:nil andIndex:-1];
-
 }
 
 -(void)matchOver
@@ -32,7 +35,8 @@
 {
     lifes++;
     level++;
-    [delegate sceneChange:nil andIndex:0];
+    [self performSelector:@selector(changeScene) withObject:nil afterDelay:2];
+    
     [self setValue:[NSNumber numberWithInteger:lifes] forKey:@"lifes"];
     [self setValue:[NSNumber numberWithInteger:level] forKey:@"level"];
 }

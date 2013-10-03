@@ -11,6 +11,7 @@
 #import "ASTGameScene.h"
 
 @implementation ASTVillan
+@synthesize isDead,isLastAnim;
 
 -(id)initWithImageNamed:(NSString *)name
 {
@@ -27,6 +28,8 @@
         self.physicsBody.contactTestBitMask = projectileCategory;
         self.physicsBody.collisionBitMask = projectileCategory;
         self.physicsBody.usesPreciseCollisionDetection = YES;
+        isDead = NO;
+        isLastAnim = NO;
     }
     
     return self;
@@ -34,11 +37,22 @@
 
 -(void)update
 {
-    if ([ASTMathUtils getRandom:10] == 0 && !self.hasActions) {
-        [self runAction:[SKAction moveToX:[ASTMathUtils getRandom:320] duration:1.5]];
-        [self runAction:[SKAction moveToY:140+[ASTMathUtils getRandom:320] duration:1.5]];
-        [self runAction:[SKAction scaleTo:0.3+[ASTMathUtils getRandom:0.7 ] duration:1.5]];
+    if (!isDead) {
+        if ([ASTMathUtils getRandom:10] == 0 && !self.hasActions) {
+            [self runAction:[SKAction moveToX:[ASTMathUtils getRandom:320] duration:1.5]];
+            [self runAction:[SKAction moveToY:(140+[ASTMathUtils getRandom:320]) duration:1.5]];
+            [self runAction:[SKAction scaleTo:(0.3+[ASTMathUtils getRandom:0.7]) duration:1.5]];
+        }
+    }else{
+        //[self removeAllActions];
+        if (!isLastAnim) {
+            isLastAnim = YES;
+            [self runAction:[SKAction scaleTo:1.5 duration:1]];
+            [self runAction:[SKAction fadeOutWithDuration:1]];
+            [self runAction:[SKAction rotateByAngle:(M_PI*4) duration:1]];
+        }
     }
+
 }
 
 @end

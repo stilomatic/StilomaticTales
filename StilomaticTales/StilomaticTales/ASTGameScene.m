@@ -95,7 +95,7 @@
 
 -(void)sceneChange:(SKScene *)scene andIndex:(NSInteger)index
 {
-    SKTransition *reveal = [SKTransition doorsCloseHorizontalWithDuration:1.0];
+    SKTransition *reveal = [SKTransition fadeWithDuration:1.0];
     ASTScoreScene *newScene = [[ASTScoreScene alloc] initWithSize:self.frame.size];
     newScene.scaleMode = SKSceneScaleModeAspectFill;
     [self.scene.view presentScene:newScene transition: reveal];
@@ -128,8 +128,9 @@
     {
         [gm playerScore:20];
         [gm villanHited];
+        [self explode:villan];
         if(gm.villanEnergy <= 0){
-            [self explode:secondBody.node];
+            [villan setIsDead:YES];
         }
     }
     
@@ -159,6 +160,7 @@
 {
     SKEmitterNode *emitter = [SKEmitterNode ast_emitterNodeWithEmitterNamed:@"BokeParticles"];
     emitter.position = node.position;
+    emitter.alpha = 0.5;
     [emitter runAction:[SKAction fadeOutWithDuration:1.0] completion:^{
         [emitter removeFromParent];
     }];
@@ -177,7 +179,9 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self launchProjectile];
+    if (!villan.isDead) {
+        [self launchProjectile];
+    }
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -202,7 +206,7 @@
     [display update];
     [villan update];
     
-    if ([ASTMathUtils getRandom:[[levelProperties objectForKey:@"missileFrequency"] floatValue]] == 0) {
+    if (!villan.isDead && [ASTMathUtils getRandom:[[levelProperties objectForKey:@"missileFrequency"] floatValue]] == 0) {
         [self launchMissile];
     }
 }
@@ -238,6 +242,7 @@
     [tmpProjectile.physicsBody applyImpulse:vector];
     [self addChild:tmpProjectile];
     [projectiles addObject:tmpProjectile];
+    canon.zPosition = self.children.count-1;
 }
 
 
