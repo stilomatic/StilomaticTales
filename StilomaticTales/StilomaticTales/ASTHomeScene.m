@@ -34,7 +34,6 @@
         [self addChild:title];
         
         SKSpriteNode *detail = [[SKSpriteNode alloc] initWithImageNamed:@"homedetail-iphone.png"];
-        //detail.anchorPoint = CGPointMake(0.0, 0.0);
         detail.position = CGPointMake(160.0, 40);
         detail.xScale = detail.yScale = 0.5;
         [self addChild:detail];
