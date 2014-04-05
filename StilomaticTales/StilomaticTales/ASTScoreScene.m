@@ -9,6 +9,7 @@
 #import "ASTScoreScene.h"
 #import "ASTHomeScene.h"
 #import "ASTButtonSprite.h"
+#import "ASTGameManager.h"
 
 @implementation ASTScoreScene
 
@@ -23,6 +24,12 @@
         bck.anchorPoint = CGPointMake(0.0, 0.0);
         [self addChild:bck];
         
+        ASTGameManager *gm = [ASTGameManager sharedInstance];
+        score = gm.score;
+        energy = gm.playerEnergy;
+        valueEnergy = 0.0;
+        valueScore = 0.0;
+        
         ASTButtonSprite *button = [[ASTButtonSprite alloc] initWithImageNamed:@"playBtn-iphone.png"];
         button.position = CGPointMake(self.size.width*0.5, 40);
         button.userInteractionEnabled = YES;
@@ -30,6 +37,34 @@
         button.xScale = button.yScale = 0.2;
         [self addChild:button];
         [button runAction:[SKAction scaleTo:1.0 duration:1.0]];
+        
+        lifesLabel = [SKLabelNode labelNodeWithFontNamed:font];
+        lifesLabel.text = [NSString stringWithFormat:@"Lifes: %u",gm.lifes];
+        lifesLabel.position = CGPointMake(120.0, 140.0);
+        lifesLabel.fontSize = 24.0;
+        lifesLabel.fontColor = [SKColor blackColor];
+        [self addChild:lifesLabel];
+        
+        energyLabel = [SKLabelNode labelNodeWithFontNamed:font];
+        energyLabel.text = [NSString stringWithFormat:@"Energy: %u",valueEnergy];
+        energyLabel.position = CGPointMake(120.0, 180.0);
+        energyLabel.fontSize = 24.0;
+        energyLabel.fontColor = [SKColor blackColor];
+        [self addChild:energyLabel];
+        
+        levelLabel = [SKLabelNode labelNodeWithFontNamed:font];
+        levelLabel.text = [NSString stringWithFormat:@"Level: %u",gm.level];
+        levelLabel.position = CGPointMake(120.0, 200.0);
+        levelLabel.fontSize = 24.0;
+        levelLabel.fontColor = [SKColor blackColor];
+        [self addChild:levelLabel];
+        
+        scoreLabel = [SKLabelNode labelNodeWithFontNamed:font];
+        scoreLabel.text = [NSString stringWithFormat:@"Score: %u",valueScore];
+        scoreLabel.position = CGPointMake(120.0, 240.0);
+        scoreLabel.fontSize = 32.0;
+        scoreLabel.fontColor = [SKColor blackColor];
+        [self addChild:scoreLabel];
     }
     
     return self;
@@ -42,6 +77,22 @@
     newScene.scaleMode = SKSceneScaleModeAspectFill;
     [self.scene.view presentScene:newScene transition: reveal];
     
+}
+
+
+-(void)update:(CFTimeInterval)currentTime {
+    if (valueScore <= score) {
+        valueScore++;
+    }
+    
+    if (valueEnergy >= energy) {
+        valueEnergy--;
+    }else{
+        valueEnergy = energy;
+    }
+    
+    energyLabel.text = [NSString stringWithFormat:@"Energy: %u",valueEnergy];
+    scoreLabel.text = [NSString stringWithFormat:@"Score: %u",valueScore];
 }
 
 @end

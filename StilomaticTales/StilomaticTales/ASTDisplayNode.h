@@ -7,8 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-
-static NSString *font = @"HoeflerText-BlackItalic";
+#import "ASTGameConstants.h"
 
 @interface ASTDisplayNode : SKNode
 {

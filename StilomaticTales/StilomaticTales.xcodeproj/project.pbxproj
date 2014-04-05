@@ -47,6 +47,12 @@
 		60796DCE17F0BD7200F5F936 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796DCD17F0BD7200F5F936 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		60796DD117F2083300F5F936 /* ASTGamekitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60796DD017F2083300F5F936 /* ASTGamekitManager.m */; };
 		60A0796E17E82C8F003FB1A1 /* levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60A0796D17E82C8F003FB1A1 /* levels.plist */; };
+		60AD72591835948C00B61134 /* ico_iphone60.png in Resources */ = {isa = PBXBuildFile; fileRef = 60AD72581835948C00B61134 /* ico_iphone60.png */; };
+		60AD725E1835961000B61134 /* splash_iphone640.1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 60AD725C1835961000B61134 /* splash_iphone640.1136.png */; };
+		60AD725F1835961000B61134 /* splash_iphone640.960.png in Resources */ = {isa = PBXBuildFile; fileRef = 60AD725D1835961000B61134 /* splash_iphone640.960.png */; };
+		60AD7263183596ED00B61134 /* splash_iphone58.png in Resources */ = {isa = PBXBuildFile; fileRef = 60AD7260183596ED00B61134 /* splash_iphone58.png */; };
+		60AD7264183596ED00B61134 /* ico_iphone80.png in Resources */ = {isa = PBXBuildFile; fileRef = 60AD7261183596ED00B61134 /* ico_iphone80.png */; };
+		60AD7265183596ED00B61134 /* ico_iphone120.png in Resources */ = {isa = PBXBuildFile; fileRef = 60AD7262183596ED00B61134 /* ico_iphone120.png */; };
 		60C6653B17FD584600E3E3C8 /* ASTHomeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6653A17FD584600E3E3C8 /* ASTHomeScene.m */; };
 		60C6653E17FD5A2800E3E3C8 /* ASTLevelPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6653D17FD5A2800E3E3C8 /* ASTLevelPicker.m */; };
 		60C6654217FD7BE200E3E3C8 /* ASTScoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6654117FD7BE200E3E3C8 /* ASTScoreScene.m */; };
@@ -55,6 +61,12 @@
 		60C6654917FDA74500E3E3C8 /* title-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654817FDA74500E3E3C8 /* title-iphone.png */; };
 		60C6654B17FDA93200E3E3C8 /* homedetail-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654A17FDA93200E3E3C8 /* homedetail-iphone.png */; };
 		60C6654D17FDB1BC00E3E3C8 /* playBtn-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C6654C17FDB1BC00E3E3C8 /* playBtn-iphone.png */; };
+		60C66550180187D000E3E3C8 /* ASTPlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C6654F180187D000E3E3C8 /* ASTPlatform.m */; };
+		60C66552180187FB00E3E3C8 /* level_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C66551180187FB00E3E3C8 /* level_0.png */; };
+		60C665581801B58300E3E3C8 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C665541801B58300E3E3C8 /* door.png */; };
+		60C665591801B58300E3E3C8 /* villan_level0.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C665551801B58300E3E3C8 /* villan_level0.png */; };
+		60C6655A1801B58300E3E3C8 /* player-level0.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C665561801B58300E3E3C8 /* player-level0.png */; };
+		60C6655B1801B58300E3E3C8 /* ground-level0.png in Resources */ = {isa = PBXBuildFile; fileRef = 60C665571801B58300E3E3C8 /* ground-level0.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +134,12 @@
 		60796DCF17F2083300F5F936 /* ASTGamekitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGamekitManager.h; sourceTree = "<group>"; };
 		60796DD017F2083300F5F936 /* ASTGamekitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTGamekitManager.m; sourceTree = "<group>"; };
 		60A0796D17E82C8F003FB1A1 /* levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = levels.plist; sourceTree = "<group>"; };
+		60AD72581835948C00B61134 /* ico_iphone60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ico_iphone60.png; path = ../../../StilomaticTheGame/ico_iphone60.png; sourceTree = "<group>"; };
+		60AD725C1835961000B61134 /* splash_iphone640.1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_iphone640.1136.png; path = ../../../StilomaticTheGame/splash_iphone640.1136.png; sourceTree = "<group>"; };
+		60AD725D1835961000B61134 /* splash_iphone640.960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_iphone640.960.png; path = ../../../StilomaticTheGame/splash_iphone640.960.png; sourceTree = "<group>"; };
+		60AD7260183596ED00B61134 /* splash_iphone58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_iphone58.png; path = ../../../StilomaticTheGame/splash_iphone58.png; sourceTree = "<group>"; };
+		60AD7261183596ED00B61134 /* ico_iphone80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ico_iphone80.png; path = ../../../StilomaticTheGame/ico_iphone80.png; sourceTree = "<group>"; };
+		60AD7262183596ED00B61134 /* ico_iphone120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ico_iphone120.png; path = ../../../StilomaticTheGame/ico_iphone120.png; sourceTree = "<group>"; };
 		60C6653917FD584600E3E3C8 /* ASTHomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTHomeScene.h; sourceTree = "<group>"; };
 		60C6653A17FD584600E3E3C8 /* ASTHomeScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTHomeScene.m; sourceTree = "<group>"; };
 		60C6653C17FD5A2800E3E3C8 /* ASTLevelPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTLevelPicker.h; sourceTree = "<group>"; };
@@ -135,6 +153,14 @@
 		60C6654817FDA74500E3E3C8 /* title-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "title-iphone.png"; path = "Base.lproj/Assets/title-iphone.png"; sourceTree = "<group>"; };
 		60C6654A17FDA93200E3E3C8 /* homedetail-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "homedetail-iphone.png"; path = "Base.lproj/Assets/homedetail-iphone.png"; sourceTree = "<group>"; };
 		60C6654C17FDB1BC00E3E3C8 /* playBtn-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "playBtn-iphone.png"; path = "Base.lproj/Assets/playBtn-iphone.png"; sourceTree = "<group>"; };
+		60C6654E180187D000E3E3C8 /* ASTPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTPlatform.h; sourceTree = "<group>"; };
+		60C6654F180187D000E3E3C8 /* ASTPlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTPlatform.m; sourceTree = "<group>"; };
+		60C66551180187FB00E3E3C8 /* level_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = level_0.png; path = ../../../StilomaticTheGame/levelsPlatform/level_0.png; sourceTree = "<group>"; };
+		60C665541801B58300E3E3C8 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = ../../../StilomaticTheGame/levelsPlatform/door.png; sourceTree = "<group>"; };
+		60C665551801B58300E3E3C8 /* villan_level0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = villan_level0.png; path = ../../../StilomaticTheGame/levelsPlatform/villan_level0.png; sourceTree = "<group>"; };
+		60C665561801B58300E3E3C8 /* player-level0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "player-level0.png"; path = "../../../StilomaticTheGame/levelsPlatform/player-level0.png"; sourceTree = "<group>"; };
+		60C665571801B58300E3E3C8 /* ground-level0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ground-level0.png"; path = "../../../StilomaticTheGame/levelsPlatform/ground-level0.png"; sourceTree = "<group>"; };
+		60D48D7B18F01C940089A311 /* ASTGameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTGameConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +224,12 @@
 		35781D6B17E1ECE000FBD5FC /* StilomaticTales */ = {
 			isa = PBXGroup;
 			children = (
+				60AD7260183596ED00B61134 /* splash_iphone58.png */,
+				60AD7261183596ED00B61134 /* ico_iphone80.png */,
+				60AD7262183596ED00B61134 /* ico_iphone120.png */,
+				60AD725C1835961000B61134 /* splash_iphone640.1136.png */,
+				60AD725D1835961000B61134 /* splash_iphone640.960.png */,
+				60AD72581835948C00B61134 /* ico_iphone60.png */,
 				60C6653F17FD5BE200E3E3C8 /* ASTSceneChangeDelegate.h */,
 				60C6653717FD57EB00E3E3C8 /* Nodes */,
 				606E762317EDC57D0015388B /* Categories */,
@@ -216,6 +248,7 @@
 				35781D8517E1ECE000FBD5FC /* Images.xcassets */,
 				35781DB517E1ED7C00FBD5FC /* Assets */,
 				35781D6C17E1ECE000FBD5FC /* Supporting Files */,
+				60D48D7B18F01C940089A311 /* ASTGameConstants.h */,
 			);
 			path = StilomaticTales;
 			sourceTree = "<group>";
@@ -252,6 +285,11 @@
 		35781DB517E1ED7C00FBD5FC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				60C665541801B58300E3E3C8 /* door.png */,
+				60C665551801B58300E3E3C8 /* villan_level0.png */,
+				60C665561801B58300E3E3C8 /* player-level0.png */,
+				60C665571801B58300E3E3C8 /* ground-level0.png */,
+				60C66551180187FB00E3E3C8 /* level_0.png */,
 				60C6654C17FDB1BC00E3E3C8 /* playBtn-iphone.png */,
 				60C6654A17FDA93200E3E3C8 /* homedetail-iphone.png */,
 				60C6654817FDA74500E3E3C8 /* title-iphone.png */,
@@ -338,6 +376,7 @@
 		60C6653817FD580200E3E3C8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				60C665531801A61600E3E3C8 /* Platform */,
 				35781DA917E1ED5E00FBD5FC /* ASTGameScene.h */,
 				35781DA817E1ED5E00FBD5FC /* ASTGameScene.m */,
 				60C6653917FD584600E3E3C8 /* ASTHomeScene.h */,
@@ -346,6 +385,15 @@
 				60C6654117FD7BE200E3E3C8 /* ASTScoreScene.m */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		60C665531801A61600E3E3C8 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				60C6654E180187D000E3E3C8 /* ASTPlatform.h */,
+				60C6654F180187D000E3E3C8 /* ASTPlatform.m */,
+			);
+			name = Platform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,23 +481,34 @@
 				60A0796E17E82C8F003FB1A1 /* levels.plist in Resources */,
 				35781D7C17E1ECE000FBD5FC /* Main_iPad.storyboard in Resources */,
 				60351E2617E635D500AF382B /* cannon.png in Resources */,
+				60AD725F1835961000B61134 /* splash_iphone640.960.png in Resources */,
 				60C6654917FDA74500E3E3C8 /* title-iphone.png in Resources */,
+				60C665591801B58300E3E3C8 /* villan_level0.png in Resources */,
+				60AD7264183596ED00B61134 /* ico_iphone80.png in Resources */,
 				606E762D17EDF52F0015388B /* villan_1.png in Resources */,
+				60C66552180187FB00E3E3C8 /* level_0.png in Resources */,
 				606E762C17EDF52F0015388B /* villan_2.png in Resources */,
 				3550908817E6F48200FC6BA7 /* missile.png in Resources */,
 				35781D7917E1ECE000FBD5FC /* Main_iPhone.storyboard in Resources */,
+				60AD725E1835961000B61134 /* splash_iphone640.1136.png in Resources */,
 				60C6654717FDA30400E3E3C8 /* bckHome.png in Resources */,
 				606E762B17EDF52F0015388B /* villan_3.png in Resources */,
+				60AD72591835948C00B61134 /* ico_iphone60.png in Resources */,
 				35781D7017E1ECE000FBD5FC /* InfoPlist.strings in Resources */,
 				60C6654D17FDB1BC00E3E3C8 /* playBtn-iphone.png in Resources */,
 				606E762A17EDF52F0015388B /* villan_4.png in Resources */,
 				606E761D17EDC4280015388B /* display.png in Resources */,
+				60C6655B1801B58300E3E3C8 /* ground-level0.png in Resources */,
 				606E761717EDC2D70015388B /* bck-iphone2.png in Resources */,
+				60AD7263183596ED00B61134 /* splash_iphone58.png in Resources */,
 				606E760E17EDA2B10015388B /* villan_0.png in Resources */,
 				606E761F17EDC5610015388B /* BokeParticles.sks in Resources */,
+				60AD7265183596ED00B61134 /* ico_iphone120.png in Resources */,
 				60351E2117E6359F00AF382B /* bubble.png in Resources */,
 				606E762517EDCCBC0015388B /* circleParticle.png in Resources */,
 				60C6654B17FDA93200E3E3C8 /* homedetail-iphone.png in Resources */,
+				60C6655A1801B58300E3E3C8 /* player-level0.png in Resources */,
+				60C665581801B58300E3E3C8 /* door.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +535,7 @@
 				35781D7F17E1ECE000FBD5FC /* ASTViewController.m in Sources */,
 				606E762217EDC5780015388B /* SKEmitterNode+SKEmitterNode_Utils.m in Sources */,
 				60C6654517FD81A300E3E3C8 /* ASTButtonSprite.m in Sources */,
+				60C66550180187D000E3E3C8 /* ASTPlatform.m in Sources */,
 				351C2A9D17E73F4B00C92620 /* ASTMissile.m in Sources */,
 				35781DB017E1ED5E00FBD5FC /* ASTMathUtils.m in Sources */,
 				60C6653B17FD584600E3E3C8 /* ASTHomeScene.m in Sources */,
@@ -614,15 +674,16 @@
 		35781D9D17E1ECE000FBD5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Antonio Stilo (H5WHCKR2KJ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Volker Brendel (84R545U7V4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StilomaticTales/StilomaticTales-Prefix.pch";
 				INFOPLIST_FILE = "StilomaticTales/StilomaticTales-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6F3C7DEF-BF5A-4F21-919A-C9D5E886EF4E";
+				PROVISIONING_PROFILE = "C22BEAD2-8460-4B47-AC9E-3547460E480C";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -630,16 +691,17 @@
 		35781D9E17E1ECE000FBD5FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Antonio Stilo (H5WHCKR2KJ)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Volker Brendel (84R545U7V4)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StilomaticTales/StilomaticTales-Prefix.pch";
 				INFOPLIST_FILE = "StilomaticTales/StilomaticTales-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "04DA4E8B-B2F0-4D27-AA98-3D29DC437A3C";
+				PROVISIONING_PROFILE = "C22BEAD2-8460-4B47-AC9E-3547460E480C";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

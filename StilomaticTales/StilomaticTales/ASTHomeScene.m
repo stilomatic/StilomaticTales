@@ -9,6 +9,7 @@
 #import "ASTHomeScene.h"
 #import "ASTLevelPicker.h"
 #import "ASTGameScene.h"
+#import "ASTPlatform.h"
 
 @implementation ASTHomeScene
 @synthesize container,levelPropreties,containerPosition,touchPosition,containerWidth;
@@ -64,6 +65,13 @@
     newScene.scaleMode = SKSceneScaleModeAspectFill;
     reveal.pausesIncomingScene = YES;
     [self.scene.view presentScene:newScene transition: reveal];
+    
+    /*
+    ASTPlatform *newScene = [[ASTPlatform alloc] initWithSize:self.frame.size];
+    newScene.scaleMode = SKSceneScaleModeAspectFill;
+    reveal.pausesIncomingScene = YES;
+    [self.scene.view presentScene:newScene transition: reveal];
+     */
 
 }
 
