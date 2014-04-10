@@ -103,7 +103,7 @@
         valueScore++;
     }
     
-    if (valueEnergy >= energy) {
+    if (valueEnergy > energy) {
         valueEnergy--;
     }else{
         valueEnergy = energy;

@@ -40,28 +40,28 @@
         
         lifesLabel = [SKLabelNode labelNodeWithFontNamed:font];
         lifesLabel.text = [NSString stringWithFormat:@"Lifes: %u",gm.lifes];
-        lifesLabel.position = CGPointMake(120.0, 140.0);
+        lifesLabel.position = CGPointMake(140.0, 180.0);
         lifesLabel.fontSize = 24.0;
         lifesLabel.fontColor = [SKColor blackColor];
         [self addChild:lifesLabel];
         
         energyLabel = [SKLabelNode labelNodeWithFontNamed:font];
         energyLabel.text = [NSString stringWithFormat:@"Energy: %u",valueEnergy];
-        energyLabel.position = CGPointMake(120.0, 180.0);
+        energyLabel.position = CGPointMake(140.0, 220.0);
         energyLabel.fontSize = 24.0;
         energyLabel.fontColor = [SKColor blackColor];
         [self addChild:energyLabel];
         
         levelLabel = [SKLabelNode labelNodeWithFontNamed:font];
         levelLabel.text = [NSString stringWithFormat:@"Level: %u",gm.level];
-        levelLabel.position = CGPointMake(120.0, 200.0);
+        levelLabel.position = CGPointMake(140.0, 240.0);
         levelLabel.fontSize = 24.0;
         levelLabel.fontColor = [SKColor blackColor];
         [self addChild:levelLabel];
         
         scoreLabel = [SKLabelNode labelNodeWithFontNamed:font];
         scoreLabel.text = [NSString stringWithFormat:@"Score: %u",valueScore];
-        scoreLabel.position = CGPointMake(120.0, 240.0);
+        scoreLabel.position = CGPointMake(140.0, 280.0);
         scoreLabel.fontSize = 32.0;
         scoreLabel.fontColor = [SKColor blackColor];
         [self addChild:scoreLabel];
@@ -85,7 +85,7 @@
         valueScore++;
     }
     
-    if (valueEnergy >= energy) {
+    if (valueEnergy > energy) {
         valueEnergy--;
     }else{
         valueEnergy = energy;
